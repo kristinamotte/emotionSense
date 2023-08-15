@@ -28,10 +28,10 @@ struct HomeView: View {
     
     var SidebarContent: some View {
         List(selection: $selectedMenuItem) {
-            link(to: .home)
-            link(to: .simple)
-            link(to: .file)
-            link(to: .drafts)
+            ForEach(viewModel.menuItems, id: \.self) { item in
+                link(to: item)
+            }
+            .listRowBackground(Color(#colorLiteral(red: 0.8831247687, green: 0.9257313609, blue: 0.9948113561, alpha: 1)))
         }
         .toolbarBackground(Color.clear, for: .windowToolbar)
         .background(Color(#colorLiteral(red: 0.8831247687, green: 0.9257313609, blue: 0.9948113561, alpha: 1)))
@@ -56,6 +56,7 @@ struct HomeView: View {
             HStack(alignment: .center, spacing: 8) {
                 Image(selectedMenuItem == page ? page.selectedImageName : page.imageName)
                 Text(page.name)
+                    .foregroundColor(selectedMenuItem == page ? Color.blue : Color.black)
             }
             .listRowSeparator(.hidden)
         }
