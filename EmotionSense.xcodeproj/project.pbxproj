@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */; };
+		75277D912A5858A1002B3BEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D902A5858A1002B3BEB /* HomeView.swift */; };
+		75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D922A5858A4002B3BEB /* Assets.xcassets */; };
+		75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D952A5858A4002B3BEB /* Preview Assets.xcassets */; };
+		75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277DA32A58591F002B3BEB /* HomeViewModel.swift */; };
+		753317162A882A1C00291F13 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753317152A882A1C00291F13 /* MenuItem.swift */; };
+		755B6F942A8039C40079CB4F /* EmotionModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */; };
+		755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F952A8039E50079CB4F /* EmotionType.swift */; };
+		755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F972A803D4C0079CB4F /* PredictionManager.swift */; };
+		75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7EC2A682CF100ACE102 /* disgust.mlmodel */; };
+		75ACF8092A682CF100ACE102 /* sadness.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7ED2A682CF100ACE102 /* sadness.mlmodel */; };
+		75ACF80A2A682CF100ACE102 /* relief.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7EE2A682CF100ACE102 /* relief.mlmodel */; };
+		75ACF80B2A682CF100ACE102 /* caring.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7EF2A682CF100ACE102 /* caring.mlmodel */; };
+		75ACF80C2A682CF100ACE102 /* grief.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F02A682CF100ACE102 /* grief.mlmodel */; };
+		75ACF80D2A682CF100ACE102 /* optimism.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F12A682CF100ACE102 /* optimism.mlmodel */; };
+		75ACF80E2A682CF100ACE102 /* remorse.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F22A682CF100ACE102 /* remorse.mlmodel */; };
+		75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F32A682CF100ACE102 /* curiosity.mlmodel */; };
+		75ACF8102A682CF100ACE102 /* approval.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F42A682CF100ACE102 /* approval.mlmodel */; };
+		75ACF8112A682CF100ACE102 /* love.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F52A682CF100ACE102 /* love.mlmodel */; };
+		75ACF8122A682CF100ACE102 /* annoyance.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F62A682CF100ACE102 /* annoyance.mlmodel */; };
+		75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F72A682CF100ACE102 /* neutral.mlmodel */; };
+		75ACF8142A682CF100ACE102 /* excitement.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F82A682CF100ACE102 /* excitement.mlmodel */; };
+		75ACF8152A682CF100ACE102 /* fear.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7F92A682CF100ACE102 /* fear.mlmodel */; };
+		75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7FA2A682CF100ACE102 /* joy.mlmodel */; };
+		75ACF8172A682CF100ACE102 /* anger.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7FB2A682CF100ACE102 /* anger.mlmodel */; };
+		75ACF8182A682CF100ACE102 /* realization.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7FC2A682CF100ACE102 /* realization.mlmodel */; };
+		75ACF8192A682CF100ACE102 /* pride.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7FD2A682CF100ACE102 /* pride.mlmodel */; };
+		75ACF81A2A682CF100ACE102 /* surprise.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7FE2A682CF100ACE102 /* surprise.mlmodel */; };
+		75ACF81B2A682CF100ACE102 /* gratitude.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7FF2A682CF100ACE102 /* gratitude.mlmodel */; };
+		75ACF81C2A682CF100ACE102 /* embarrassment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8002A682CF100ACE102 /* embarrassment.mlmodel */; };
+		75ACF81D2A682CF100ACE102 /* disapproval.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8012A682CF100ACE102 /* disapproval.mlmodel */; };
+		75ACF81E2A682CF100ACE102 /* nervousness.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8022A682CF100ACE102 /* nervousness.mlmodel */; };
+		75ACF81F2A682CF100ACE102 /* amusement.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8032A682CF100ACE102 /* amusement.mlmodel */; };
+		75ACF8202A682CF100ACE102 /* confusion.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8042A682CF100ACE102 /* confusion.mlmodel */; };
+		75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8052A682CF100ACE102 /* disappointment.mlmodel */; };
+		75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8062A682CF100ACE102 /* desire.mlmodel */; };
+		75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8072A682CF100ACE102 /* admiration.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		75277D8B2A5858A0002B3BEB /* EmotionSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSenseApp.swift; sourceTree = "<group>"; };
+		75277D902A5858A1002B3BEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		75277D922A5858A4002B3BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75277D952A5858A4002B3BEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75277D972A5858A4002B3BEB /* EmotionSense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmotionSense.entitlements; sourceTree = "<group>"; };
+		75277DA32A58591F002B3BEB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		753317152A882A1C00291F13 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionModelBuilder.swift; sourceTree = "<group>"; };
+		755B6F952A8039E50079CB4F /* EmotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionType.swift; sourceTree = "<group>"; };
+		755B6F972A803D4C0079CB4F /* PredictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
+		75ACF7EC2A682CF100ACE102 /* disgust.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = disgust.mlmodel; sourceTree = "<group>"; };
+		75ACF7ED2A682CF100ACE102 /* sadness.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sadness.mlmodel; sourceTree = "<group>"; };
+		75ACF7EE2A682CF100ACE102 /* relief.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = relief.mlmodel; sourceTree = "<group>"; };
+		75ACF7EF2A682CF100ACE102 /* caring.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = caring.mlmodel; sourceTree = "<group>"; };
+		75ACF7F02A682CF100ACE102 /* grief.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = grief.mlmodel; sourceTree = "<group>"; };
+		75ACF7F12A682CF100ACE102 /* optimism.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = optimism.mlmodel; sourceTree = "<group>"; };
+		75ACF7F22A682CF100ACE102 /* remorse.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = remorse.mlmodel; sourceTree = "<group>"; };
+		75ACF7F32A682CF100ACE102 /* curiosity.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = curiosity.mlmodel; sourceTree = "<group>"; };
+		75ACF7F42A682CF100ACE102 /* approval.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = approval.mlmodel; sourceTree = "<group>"; };
+		75ACF7F52A682CF100ACE102 /* love.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = love.mlmodel; sourceTree = "<group>"; };
+		75ACF7F62A682CF100ACE102 /* annoyance.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = annoyance.mlmodel; sourceTree = "<group>"; };
+		75ACF7F72A682CF100ACE102 /* neutral.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = neutral.mlmodel; sourceTree = "<group>"; };
+		75ACF7F82A682CF100ACE102 /* excitement.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = excitement.mlmodel; sourceTree = "<group>"; };
+		75ACF7F92A682CF100ACE102 /* fear.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fear.mlmodel; sourceTree = "<group>"; };
+		75ACF7FA2A682CF100ACE102 /* joy.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = joy.mlmodel; sourceTree = "<group>"; };
+		75ACF7FB2A682CF100ACE102 /* anger.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = anger.mlmodel; sourceTree = "<group>"; };
+		75ACF7FC2A682CF100ACE102 /* realization.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realization.mlmodel; sourceTree = "<group>"; };
+		75ACF7FD2A682CF100ACE102 /* pride.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = pride.mlmodel; sourceTree = "<group>"; };
+		75ACF7FE2A682CF100ACE102 /* surprise.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = surprise.mlmodel; sourceTree = "<group>"; };
+		75ACF7FF2A682CF100ACE102 /* gratitude.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = gratitude.mlmodel; sourceTree = "<group>"; };
+		75ACF8002A682CF100ACE102 /* embarrassment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = embarrassment.mlmodel; sourceTree = "<group>"; };
+		75ACF8012A682CF100ACE102 /* disapproval.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = disapproval.mlmodel; sourceTree = "<group>"; };
+		75ACF8022A682CF100ACE102 /* nervousness.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = nervousness.mlmodel; sourceTree = "<group>"; };
+		75ACF8032A682CF100ACE102 /* amusement.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = amusement.mlmodel; sourceTree = "<group>"; };
+		75ACF8042A682CF100ACE102 /* confusion.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = confusion.mlmodel; sourceTree = "<group>"; };
+		75ACF8052A682CF100ACE102 /* disappointment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = disappointment.mlmodel; sourceTree = "<group>"; };
+		75ACF8062A682CF100ACE102 /* desire.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = desire.mlmodel; sourceTree = "<group>"; };
+		75ACF8072A682CF100ACE102 /* admiration.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = admiration.mlmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75277D882A5858A0002B3BEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75277D822A5858A0002B3BEB = {
+			isa = PBXGroup;
+			children = (
+				75277D8D2A5858A0002B3BEB /* EmotionSense */,
+				75277D8C2A5858A0002B3BEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75277D8C2A5858A0002B3BEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75277D8B2A5858A0002B3BEB /* EmotionSense.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75277D8D2A5858A0002B3BEB /* EmotionSense */ = {
+			isa = PBXGroup;
+			children = (
+				755B6F9B2A8042EE0079CB4F /* UI Components */,
+				755B6F992A8042810079CB4F /* Features */,
+				755B6F922A8038E30079CB4F /* System */,
+				75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */,
+				75ACF7EB2A682CF100ACE102 /* models */,
+				75277D922A5858A4002B3BEB /* Assets.xcassets */,
+				75277D972A5858A4002B3BEB /* EmotionSense.entitlements */,
+				75277D942A5858A4002B3BEB /* Preview Content */,
+			);
+			path = EmotionSense;
+			sourceTree = "<group>";
+		};
+		75277D942A5858A4002B3BEB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				75277D952A5858A4002B3BEB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		755B6F922A8038E30079CB4F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */,
+				755B6F952A8039E50079CB4F /* EmotionType.swift */,
+				755B6F972A803D4C0079CB4F /* PredictionManager.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		755B6F992A8042810079CB4F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				755B6F9A2A80428C0079CB4F /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		755B6F9A2A80428C0079CB4F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				753317152A882A1C00291F13 /* MenuItem.swift */,
+				75277D902A5858A1002B3BEB /* HomeView.swift */,
+				75277DA32A58591F002B3BEB /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		755B6F9B2A8042EE0079CB4F /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		75ACF7EB2A682CF100ACE102 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				75ACF7EC2A682CF100ACE102 /* disgust.mlmodel */,
+				75ACF7ED2A682CF100ACE102 /* sadness.mlmodel */,
+				75ACF7EE2A682CF100ACE102 /* relief.mlmodel */,
+				75ACF7EF2A682CF100ACE102 /* caring.mlmodel */,
+				75ACF7F02A682CF100ACE102 /* grief.mlmodel */,
+				75ACF7F12A682CF100ACE102 /* optimism.mlmodel */,
+				75ACF7F22A682CF100ACE102 /* remorse.mlmodel */,
+				75ACF7F32A682CF100ACE102 /* curiosity.mlmodel */,
+				75ACF7F42A682CF100ACE102 /* approval.mlmodel */,
+				75ACF7F52A682CF100ACE102 /* love.mlmodel */,
+				75ACF7F62A682CF100ACE102 /* annoyance.mlmodel */,
+				75ACF7F72A682CF100ACE102 /* neutral.mlmodel */,
+				75ACF7F82A682CF100ACE102 /* excitement.mlmodel */,
+				75ACF7F92A682CF100ACE102 /* fear.mlmodel */,
+				75ACF7FA2A682CF100ACE102 /* joy.mlmodel */,
+				75ACF7FB2A682CF100ACE102 /* anger.mlmodel */,
+				75ACF7FC2A682CF100ACE102 /* realization.mlmodel */,
+				75ACF7FD2A682CF100ACE102 /* pride.mlmodel */,
+				75ACF7FE2A682CF100ACE102 /* surprise.mlmodel */,
+				75ACF7FF2A682CF100ACE102 /* gratitude.mlmodel */,
+				75ACF8002A682CF100ACE102 /* embarrassment.mlmodel */,
+				75ACF8012A682CF100ACE102 /* disapproval.mlmodel */,
+				75ACF8022A682CF100ACE102 /* nervousness.mlmodel */,
+				75ACF8032A682CF100ACE102 /* amusement.mlmodel */,
+				75ACF8042A682CF100ACE102 /* confusion.mlmodel */,
+				75ACF8052A682CF100ACE102 /* disappointment.mlmodel */,
+				75ACF8062A682CF100ACE102 /* desire.mlmodel */,
+				75ACF8072A682CF100ACE102 /* admiration.mlmodel */,
+			);
+			path = models;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75277D8A2A5858A0002B3BEB /* EmotionSense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75277D9A2A5858A4002B3BEB /* Build configuration list for PBXNativeTarget "EmotionSense" */;
+			buildPhases = (
+				75277D872A5858A0002B3BEB /* Sources */,
+				75277D882A5858A0002B3BEB /* Frameworks */,
+				75277D892A5858A0002B3BEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmotionSense;
+			productName = EmotionSense;
+			productReference = 75277D8B2A5858A0002B3BEB /* EmotionSense.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75277D832A5858A0002B3BEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					75277D8A2A5858A0002B3BEB = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 75277D862A5858A0002B3BEB /* Build configuration list for PBXProject "EmotionSense" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75277D822A5858A0002B3BEB;
+			productRefGroup = 75277D8C2A5858A0002B3BEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75277D8A2A5858A0002B3BEB /* EmotionSense */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75277D892A5858A0002B3BEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */,
+				75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75277D872A5858A0002B3BEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75ACF81E2A682CF100ACE102 /* nervousness.mlmodel in Sources */,
+				75ACF8152A682CF100ACE102 /* fear.mlmodel in Sources */,
+				75ACF8142A682CF100ACE102 /* excitement.mlmodel in Sources */,
+				75ACF8092A682CF100ACE102 /* sadness.mlmodel in Sources */,
+				75ACF81A2A682CF100ACE102 /* surprise.mlmodel in Sources */,
+				75ACF81B2A682CF100ACE102 /* gratitude.mlmodel in Sources */,
+				755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */,
+				75ACF8122A682CF100ACE102 /* annoyance.mlmodel in Sources */,
+				755B6F942A8039C40079CB4F /* EmotionModelBuilder.swift in Sources */,
+				75ACF80D2A682CF100ACE102 /* optimism.mlmodel in Sources */,
+				75ACF8112A682CF100ACE102 /* love.mlmodel in Sources */,
+				75ACF80E2A682CF100ACE102 /* remorse.mlmodel in Sources */,
+				75ACF81C2A682CF100ACE102 /* embarrassment.mlmodel in Sources */,
+				75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */,
+				75ACF8172A682CF100ACE102 /* anger.mlmodel in Sources */,
+				75ACF81F2A682CF100ACE102 /* amusement.mlmodel in Sources */,
+				75ACF81D2A682CF100ACE102 /* disapproval.mlmodel in Sources */,
+				75ACF80B2A682CF100ACE102 /* caring.mlmodel in Sources */,
+				75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */,
+				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
+				75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */,
+				75ACF80C2A682CF100ACE102 /* grief.mlmodel in Sources */,
+				75ACF8102A682CF100ACE102 /* approval.mlmodel in Sources */,
+				75ACF8182A682CF100ACE102 /* realization.mlmodel in Sources */,
+				75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */,
+				75ACF8202A682CF100ACE102 /* confusion.mlmodel in Sources */,
+				75277D912A5858A1002B3BEB /* HomeView.swift in Sources */,
+				75ACF80A2A682CF100ACE102 /* relief.mlmodel in Sources */,
+				75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */,
+				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
+				75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */,
+				75ACF8192A682CF100ACE102 /* pride.mlmodel in Sources */,
+				753317162A882A1C00291F13 /* MenuItem.swift in Sources */,
+				75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */,
+				75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		75277D982A5858A4002B3BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		75277D992A5858A4002B3BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		75277D9B2A5858A4002B3BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmotionSense/EmotionSense.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmotionSense/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "haku-emotion-app.EmotionSense";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		75277D9C2A5858A4002B3BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmotionSense/EmotionSense.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmotionSense/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "haku-emotion-app.EmotionSense";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75277D862A5858A0002B3BEB /* Build configuration list for PBXProject "EmotionSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75277D982A5858A4002B3BEB /* Debug */,
+				75277D992A5858A4002B3BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75277D9A2A5858A4002B3BEB /* Build configuration list for PBXNativeTarget "EmotionSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75277D9B2A5858A4002B3BEB /* Debug */,
+				75277D9C2A5858A4002B3BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75277D832A5858A0002B3BEB /* Project object */;
+}
