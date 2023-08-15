@@ -118,7 +118,6 @@
 		75277D8D2A5858A0002B3BEB /* EmotionSense */ = {
 			isa = PBXGroup;
 			children = (
-				755B6F9B2A8042EE0079CB4F /* UI Components */,
 				755B6F992A8042810079CB4F /* Features */,
 				755B6F922A8038E30079CB4F /* System */,
 				75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */,
@@ -164,13 +163,6 @@
 				75277DA32A58591F002B3BEB /* HomeViewModel.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		755B6F9B2A8042EE0079CB4F /* UI Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UI Components";
 			sourceTree = "<group>";
 		};
 		75ACF7EB2A682CF100ACE102 /* models */ = {
