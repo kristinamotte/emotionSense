@@ -33,6 +33,8 @@ struct HomeView: View {
             link(to: .file)
             link(to: .drafts)
         }
+        .toolbarBackground(Color.clear, for: .windowToolbar)
+        .background(Color(#colorLiteral(red: 0.8831247687, green: 0.9257313609, blue: 0.9948113561, alpha: 1)))
     }
     
     @ViewBuilder
@@ -55,6 +57,7 @@ struct HomeView: View {
                 Image(selectedMenuItem == page ? page.selectedImageName : page.imageName)
                 Text(page.name)
             }
+            .listRowSeparator(.hidden)
         }
         .padding(.vertical, 12)
     }
