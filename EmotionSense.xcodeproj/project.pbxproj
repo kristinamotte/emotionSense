@@ -55,6 +55,7 @@
 		75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8052A682CF100ACE102 /* disappointment.mlmodel */; };
 		75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8062A682CF100ACE102 /* desire.mlmodel */; };
 		75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8072A682CF100ACE102 /* admiration.mlmodel */; };
+		75E395592A90DFCA007770AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34D2A90D07B008AE449 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -350,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E395592A90DFCA007770AE /* Info.plist in Resources */,
 				75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */,
 				75A5C35E2A90DDBE008AE449 /* Raleway-Regular.ttf in Resources */,
 				75A5C35D2A90DDBE008AE449 /* Raleway-Medium.ttf in Resources */,
