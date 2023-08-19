@@ -16,6 +16,17 @@
 		755B6F942A8039C40079CB4F /* EmotionModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */; };
 		755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F952A8039E50079CB4F /* EmotionType.swift */; };
 		755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F972A803D4C0079CB4F /* PredictionManager.swift */; };
+		75A5C3452A90CEBC008AE449 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3442A90CEBC008AE449 /* Colors.swift */; };
+		75A5C34F2A90D0E1008AE449 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C34E2A90D0E1008AE449 /* Fonts.swift */; };
+		75A5C3522A90D3B0008AE449 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3512A90D3B0008AE449 /* View+Extensions.swift */; };
+		75A5C3552A90D50C008AE449 /* SimpleAnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3542A90D50C008AE449 /* SimpleAnalyseView.swift */; };
+		75A5C3572A90D51B008AE449 /* SimpleAnalyseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3562A90D51B008AE449 /* SimpleAnalyseViewModel.swift */; };
+		75A5C35B2A90DA7B008AE449 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C35A2A90DA7B008AE449 /* Shake.swift */; };
+		75A5C35C2A90DDBB008AE449 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34B2A90D051008AE449 /* Raleway-Bold.ttf */; };
+		75A5C35D2A90DDBE008AE449 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C3492A90D051008AE449 /* Raleway-Medium.ttf */; };
+		75A5C35E2A90DDBE008AE449 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C3482A90D051008AE449 /* Raleway-Regular.ttf */; };
+		75A5C35F2A90DDBE008AE449 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34C2A90D051008AE449 /* Raleway-Light.ttf */; };
+		75A5C3602A90DDBF008AE449 /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34A2A90D051008AE449 /* Raleway-SemiBold.ttf */; };
 		75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7EC2A682CF100ACE102 /* disgust.mlmodel */; };
 		75ACF8092A682CF100ACE102 /* sadness.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7ED2A682CF100ACE102 /* sadness.mlmodel */; };
 		75ACF80A2A682CF100ACE102 /* relief.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF7EE2A682CF100ACE102 /* relief.mlmodel */; };
@@ -58,6 +69,18 @@
 		755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionModelBuilder.swift; sourceTree = "<group>"; };
 		755B6F952A8039E50079CB4F /* EmotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionType.swift; sourceTree = "<group>"; };
 		755B6F972A803D4C0079CB4F /* PredictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
+		75A5C3442A90CEBC008AE449 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		75A5C3482A90D051008AE449 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		75A5C3492A90D051008AE449 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		75A5C34A2A90D051008AE449 /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		75A5C34B2A90D051008AE449 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		75A5C34C2A90D051008AE449 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		75A5C34D2A90D07B008AE449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		75A5C34E2A90D0E1008AE449 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		75A5C3512A90D3B0008AE449 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		75A5C3542A90D50C008AE449 /* SimpleAnalyseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnalyseView.swift; sourceTree = "<group>"; };
+		75A5C3562A90D51B008AE449 /* SimpleAnalyseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnalyseViewModel.swift; sourceTree = "<group>"; };
+		75A5C35A2A90DA7B008AE449 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		75ACF7EC2A682CF100ACE102 /* disgust.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = disgust.mlmodel; sourceTree = "<group>"; };
 		75ACF7ED2A682CF100ACE102 /* sadness.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sadness.mlmodel; sourceTree = "<group>"; };
 		75ACF7EE2A682CF100ACE102 /* relief.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = relief.mlmodel; sourceTree = "<group>"; };
@@ -118,11 +141,12 @@
 		75277D8D2A5858A0002B3BEB /* EmotionSense */ = {
 			isa = PBXGroup;
 			children = (
+				75A5C34D2A90D07B008AE449 /* Info.plist */,
+				75A5C3582A90DA5E008AE449 /* UI Components */,
 				755B6F992A8042810079CB4F /* Features */,
 				755B6F922A8038E30079CB4F /* System */,
 				75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */,
-				75ACF7EB2A682CF100ACE102 /* models */,
-				75277D922A5858A4002B3BEB /* Assets.xcassets */,
+				75A5C3462A90D028008AE449 /* Resources */,
 				75277D972A5858A4002B3BEB /* EmotionSense.entitlements */,
 				75277D942A5858A4002B3BEB /* Preview Content */,
 			);
@@ -140,6 +164,8 @@
 		755B6F922A8038E30079CB4F /* System */ = {
 			isa = PBXGroup;
 			children = (
+				75A5C3502A90D3A2008AE449 /* Extensions */,
+				75A5C3432A90CEAD008AE449 /* Theme */,
 				755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */,
 				755B6F952A8039E50079CB4F /* EmotionType.swift */,
 				755B6F972A803D4C0079CB4F /* PredictionManager.swift */,
@@ -150,6 +176,7 @@
 		755B6F992A8042810079CB4F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75A5C3532A90D4F9008AE449 /* Simple Analyse */,
 				755B6F9A2A80428C0079CB4F /* Home */,
 			);
 			path = Features;
@@ -163,6 +190,70 @@
 				75277DA32A58591F002B3BEB /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		75A5C3432A90CEAD008AE449 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C3442A90CEBC008AE449 /* Colors.swift */,
+				75A5C34E2A90D0E1008AE449 /* Fonts.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		75A5C3462A90D028008AE449 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C3472A90D038008AE449 /* fonts */,
+				75ACF7EB2A682CF100ACE102 /* models */,
+				75277D922A5858A4002B3BEB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75A5C3472A90D038008AE449 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C34B2A90D051008AE449 /* Raleway-Bold.ttf */,
+				75A5C34C2A90D051008AE449 /* Raleway-Light.ttf */,
+				75A5C3492A90D051008AE449 /* Raleway-Medium.ttf */,
+				75A5C3482A90D051008AE449 /* Raleway-Regular.ttf */,
+				75A5C34A2A90D051008AE449 /* Raleway-SemiBold.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		75A5C3502A90D3A2008AE449 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C3512A90D3B0008AE449 /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75A5C3532A90D4F9008AE449 /* Simple Analyse */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C3542A90D50C008AE449 /* SimpleAnalyseView.swift */,
+				75A5C3562A90D51B008AE449 /* SimpleAnalyseViewModel.swift */,
+			);
+			path = "Simple Analyse";
+			sourceTree = "<group>";
+		};
+		75A5C3582A90DA5E008AE449 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C3592A90DA6E008AE449 /* Modifiers */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		75A5C3592A90DA6E008AE449 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				75A5C35A2A90DA7B008AE449 /* Shake.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		75ACF7EB2A682CF100ACE102 /* models */ = {
@@ -197,7 +288,8 @@
 				75ACF8062A682CF100ACE102 /* desire.mlmodel */,
 				75ACF8072A682CF100ACE102 /* admiration.mlmodel */,
 			);
-			path = models;
+			name = models;
+			path = EmotionSense/Resources/models;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -259,7 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */,
+				75A5C35E2A90DDBE008AE449 /* Raleway-Regular.ttf in Resources */,
+				75A5C35D2A90DDBE008AE449 /* Raleway-Medium.ttf in Resources */,
+				75A5C35F2A90DDBE008AE449 /* Raleway-Light.ttf in Resources */,
+				75A5C35C2A90DDBB008AE449 /* Raleway-Bold.ttf in Resources */,
 				75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */,
+				75A5C3602A90DDBF008AE449 /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +368,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75ACF81E2A682CF100ACE102 /* nervousness.mlmodel in Sources */,
+				75A5C3452A90CEBC008AE449 /* Colors.swift in Sources */,
+				75A5C3572A90D51B008AE449 /* SimpleAnalyseViewModel.swift in Sources */,
 				75ACF8152A682CF100ACE102 /* fear.mlmodel in Sources */,
 				75ACF8142A682CF100ACE102 /* excitement.mlmodel in Sources */,
 				75ACF8092A682CF100ACE102 /* sadness.mlmodel in Sources */,
+				75A5C3552A90D50C008AE449 /* SimpleAnalyseView.swift in Sources */,
 				75ACF81A2A682CF100ACE102 /* surprise.mlmodel in Sources */,
 				75ACF81B2A682CF100ACE102 /* gratitude.mlmodel in Sources */,
 				755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */,
@@ -291,6 +391,7 @@
 				75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */,
 				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
 				75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */,
+				75A5C35B2A90DA7B008AE449 /* Shake.swift in Sources */,
 				75ACF80C2A682CF100ACE102 /* grief.mlmodel in Sources */,
 				75ACF8102A682CF100ACE102 /* approval.mlmodel in Sources */,
 				75ACF8182A682CF100ACE102 /* realization.mlmodel in Sources */,
@@ -299,11 +400,13 @@
 				75277D912A5858A1002B3BEB /* HomeView.swift in Sources */,
 				75ACF80A2A682CF100ACE102 /* relief.mlmodel in Sources */,
 				75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */,
+				75A5C3522A90D3B0008AE449 /* View+Extensions.swift in Sources */,
 				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
 				75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */,
 				75ACF8192A682CF100ACE102 /* pride.mlmodel in Sources */,
 				753317162A882A1C00291F13 /* MenuItem.swift in Sources */,
 				75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */,
+				75A5C34F2A90D0E1008AE449 /* Fonts.swift in Sources */,
 				75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +539,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EmotionSense/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmotionSense/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,6 +566,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EmotionSense/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmotionSense/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (

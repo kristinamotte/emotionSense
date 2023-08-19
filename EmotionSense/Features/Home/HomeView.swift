@@ -31,10 +31,11 @@ struct HomeView: View {
             ForEach(viewModel.menuItems, id: \.self) { item in
                 link(to: item)
             }
-            .listRowBackground(Color(#colorLiteral(red: 0.8831247687, green: 0.9257313609, blue: 0.9948113561, alpha: 1)))
+            .listRowBackground(Color(Colors.lightGrey))
         }
         .toolbarBackground(Color.clear, for: .windowToolbar)
-        .background(Color(#colorLiteral(red: 0.8831247687, green: 0.9257313609, blue: 0.9948113561, alpha: 1)))
+        .padding(.leading, 16)
+        .background(Color(Colors.lightGrey))
     }
     
     @ViewBuilder
@@ -43,7 +44,7 @@ struct HomeView: View {
         case .home:
             Text(selectedMenuItem.name)
         case .simple:
-            Text(selectedMenuItem.name)
+            SimpleAnalyseView(viewModel: SimpleAnalyseViewModel())
         case .file:
             Text(selectedMenuItem.name)
         case .drafts:
@@ -56,7 +57,8 @@ struct HomeView: View {
             HStack(alignment: .center, spacing: 8) {
                 Image(selectedMenuItem == page ? page.selectedImageName : page.imageName)
                 Text(page.name)
-                    .foregroundColor(selectedMenuItem == page ? Color.blue : Color.black)
+                    .semiBold14(with: selectedMenuItem == page ? Color(Colors.blue) : Color(Colors.darkGrey))
+                
             }
             .listRowSeparator(.hidden)
         }
