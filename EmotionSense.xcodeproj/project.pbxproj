@@ -13,6 +13,9 @@
 		75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D952A5858A4002B3BEB /* Preview Assets.xcassets */; };
 		75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277DA32A58591F002B3BEB /* HomeViewModel.swift */; };
 		753317162A882A1C00291F13 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753317152A882A1C00291F13 /* MenuItem.swift */; };
+		7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D02A92870E005847AA /* ButtonStyles.swift */; };
+		7554E9D32A92880D005847AA /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D22A92880D005847AA /* ViewModifiers.swift */; };
+		7554E9D52A928DCA005847AA /* InputBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D42A928DCA005847AA /* InputBindingManager.swift */; };
 		755B6F942A8039C40079CB4F /* EmotionModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */; };
 		755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F952A8039E50079CB4F /* EmotionType.swift */; };
 		755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F972A803D4C0079CB4F /* PredictionManager.swift */; };
@@ -67,6 +70,9 @@
 		75277D972A5858A4002B3BEB /* EmotionSense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmotionSense.entitlements; sourceTree = "<group>"; };
 		75277DA32A58591F002B3BEB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		753317152A882A1C00291F13 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		7554E9D02A92870E005847AA /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		7554E9D22A92880D005847AA /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		7554E9D42A928DCA005847AA /* InputBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBindingManager.swift; sourceTree = "<group>"; };
 		755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionModelBuilder.swift; sourceTree = "<group>"; };
 		755B6F952A8039E50079CB4F /* EmotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionType.swift; sourceTree = "<group>"; };
 		755B6F972A803D4C0079CB4F /* PredictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
@@ -253,6 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				75A5C35A2A90DA7B008AE449 /* Shake.swift */,
+				7554E9D02A92870E005847AA /* ButtonStyles.swift */,
+				7554E9D22A92880D005847AA /* ViewModifiers.swift */,
+				7554E9D42A928DCA005847AA /* InputBindingManager.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -371,8 +380,10 @@
 			files = (
 				75ACF81E2A682CF100ACE102 /* nervousness.mlmodel in Sources */,
 				75A5C3452A90CEBC008AE449 /* Colors.swift in Sources */,
+				7554E9D52A928DCA005847AA /* InputBindingManager.swift in Sources */,
 				75A5C3572A90D51B008AE449 /* SimpleAnalyseViewModel.swift in Sources */,
 				75ACF8152A682CF100ACE102 /* fear.mlmodel in Sources */,
+				7554E9D32A92880D005847AA /* ViewModifiers.swift in Sources */,
 				75ACF8142A682CF100ACE102 /* excitement.mlmodel in Sources */,
 				75ACF8092A682CF100ACE102 /* sadness.mlmodel in Sources */,
 				75A5C3552A90D50C008AE449 /* SimpleAnalyseView.swift in Sources */,
@@ -394,6 +405,7 @@
 				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
 				75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */,
 				75A5C35B2A90DA7B008AE449 /* Shake.swift in Sources */,
+				7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */,
 				75ACF80C2A682CF100ACE102 /* grief.mlmodel in Sources */,
 				75ACF8102A682CF100ACE102 /* approval.mlmodel in Sources */,
 				75ACF8182A682CF100ACE102 /* realization.mlmodel in Sources */,

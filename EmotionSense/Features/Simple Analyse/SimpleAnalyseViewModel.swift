@@ -8,5 +8,7 @@
 import SwiftUI
 
 final class SimpleAnalyseViewModel: ObservableObject {
-    
+    @Published var text: String = ""
+    @Published var isAnalysed: Bool = false
+    @Published var numberOfChars: Int = .zero
 }
