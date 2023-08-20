@@ -25,7 +25,7 @@ final class PredictionManager {
         }
     }
     
-    func getPrediction(for text: String) -> [String: Double] {
+    func getPrediction(for text: String) async -> [String: Double] {
         var results: [String: Double] = [:]
         
         predictors.forEach { type, predictor in
@@ -33,9 +33,13 @@ final class PredictionManager {
             let predictionSet = predictor.predictedLabelHypotheses(for: text, maximumCount: 1)
             let confidence = predictionSet[prediction] ?? 0.0
             
-            if prediction == "1", confidence > 0.5 {
+            if prediction == "1", confidence > 0.6 {
                 results[type.rawValue] = confidence
             }
+        }
+        
+        if results.isEmpty {
+            results[EmotionType.unknown.rawValue] = 1.0
         }
         
         return results

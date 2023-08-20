@@ -36,4 +36,5 @@ enum EmotionType: String, CaseIterable {
     case disappointment
     case desire
     case admiration
+    case unknown
 }

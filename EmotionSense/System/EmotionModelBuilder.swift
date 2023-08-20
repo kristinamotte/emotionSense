@@ -13,10 +13,8 @@ final class EmotionModelBuilder {
     private var models: [EmotionType: MLModel] = [:]
     
     init() {
-        EmotionType.allCases.forEach { type in
-            if let model = getModel(for: type) {
-                models[type] = model
-            }
+        Task(priority: .high){
+            await getAllModels()
         }
     }
     
@@ -25,6 +23,14 @@ final class EmotionModelBuilder {
     }
     
     // MARK: - Helpers
+    private func getAllModels() async {
+        EmotionType.allCases.forEach { type in
+            if let model = getModel(for: type) {
+                models[type] = model
+            }
+        }
+    }
+    
     private func getModel(for emotionType: EmotionType) -> MLModel? {
         var model: MLModel?
         
@@ -85,6 +91,8 @@ final class EmotionModelBuilder {
             model = try? desire(configuration: MLModelConfiguration()).model
         case .admiration:
             model = try? admiration(configuration: MLModelConfiguration()).model
+        case .unknown:
+            break
         }
         
         return model

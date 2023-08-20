@@ -21,9 +21,6 @@ struct HomeView: View {
         }
         .navigationSplitViewStyle(.balanced)
         .background(Color.white)
-        .onAppear {
-            viewModel.predict()
-        }
     }
     
     var SidebarContent: some View {

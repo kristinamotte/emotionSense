@@ -8,7 +8,27 @@
 import SwiftUI
 
 final class SimpleAnalyseViewModel: ObservableObject {
-    @Published var text: String = ""
     @Published var isAnalysed: Bool = false
     @Published var numberOfChars: Int = .zero
+    @Published var analyseResults: [String: Double] = [:]
+    
+    // MARK: - Dependencies
+    private let predictionManager: PredictionManager
+    
+    init(predictionManager: PredictionManager = .shared) {
+        self.predictionManager = predictionManager
+    }
+    
+    func analyse(for text: String) {
+        isAnalysed = true
+        
+        Task {
+            let results = await predictionManager.getPrediction(for: text)
+            
+            await MainActor.run {
+                self.analyseResults = results
+                self.isAnalysed = false
+            }
+        }
+    }
 }

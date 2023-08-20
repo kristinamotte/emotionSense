@@ -18,6 +18,12 @@ struct SimpleAnalyseView: View {
             VStack(alignment: .leading, spacing: 24.0) {
                 Description
                 InputField
+                HStack {
+                    ForEach(viewModel.analyseResults.sorted { $0.1 > $1.1 }, id: \.key) { key, value in
+                        Text("\(key): \(value)")
+                    }
+                }
+                Spacer()
             }
             Spacer()
         }
@@ -25,6 +31,10 @@ struct SimpleAnalyseView: View {
         .padding(.top, 56)
         .onChange(of: inputBindingManager.input) { text in
             viewModel.numberOfChars = text.count
+            
+            if text.count == 0 {
+                viewModel.analyseResults = [:]
+            }
         }
     }
     
@@ -54,7 +64,7 @@ struct SimpleAnalyseView: View {
                 CharactersLimit
                 Spacer()
                 Button {
-                    viewModel.isAnalysed = true
+                    viewModel.analyse(for: inputBindingManager.input)
                 } label: {
                     ButtonContent
                         .frame(maxWidth: 170)
@@ -63,7 +73,6 @@ struct SimpleAnalyseView: View {
                 .buttonStyle(ButtonStyles.defaultNormal)
                 .disabled(viewModel.isAnalysed)
             }
-            Spacer()
         }
         .frame(maxWidth: 540)
     }
