@@ -15,6 +15,7 @@ xcuserdata
 *.xcbkptlist
 xcschememanagement.plist
 *.xccheckout
+*.xcuserstate
 
 # Ignore SVN
 .svn
