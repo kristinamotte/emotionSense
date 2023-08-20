@@ -28,6 +28,12 @@ final class PredictionManager {
     func getPrediction(for text: String) async -> [String: Double] {
         var results: [String: Double] = [:]
         
+        if Int(text) != nil || Double(text) != nil {
+            results[EmotionType.unknown.rawValue] = 1.0
+            
+            return results
+        }
+        
         predictors.forEach { type, predictor in
             let prediction = predictor.predictedLabel(for: text) ?? ""
             let predictionSet = predictor.predictedLabelHypotheses(for: text, maximumCount: 1)

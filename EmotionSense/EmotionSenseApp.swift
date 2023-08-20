@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct EmotionSenseApp: App {
+    private let predictionManager: PredictionManager = .shared
+    
     var body: some Scene {
         WindowGroup {
             HomeView(viewModel: HomeViewModel())

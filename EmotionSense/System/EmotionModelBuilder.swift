@@ -13,9 +13,7 @@ final class EmotionModelBuilder {
     private var models: [EmotionType: MLModel] = [:]
     
     init() {
-        Task(priority: .high){
-            await getAllModels()
-        }
+        getAllModels()
     }
     
     func getModel(of type: EmotionType) -> MLModel? {
@@ -23,7 +21,7 @@ final class EmotionModelBuilder {
     }
     
     // MARK: - Helpers
-    private func getAllModels() async {
+    private func getAllModels() {
         EmotionType.allCases.forEach { type in
             if let model = getModel(for: type) {
                 models[type] = model
