@@ -58,7 +58,7 @@ struct SimpleAnalyseView: View {
                 .border(Color(Colors.borderGrey), width: 2.0)
                 .cornerRadius(5.0)
                 .frame(minWidth: 540, maxWidth: 540, maxHeight: 165)
-                .disabled(viewModel.isAnalysed)
+                .disabled(viewModel.isAnalysing)
                 .onChange(of: inputBindingManager.input, perform: editingChanged)
             HStack(alignment: .center, spacing: .zero) {
                 CharactersLimit
@@ -71,14 +71,14 @@ struct SimpleAnalyseView: View {
                         .modifier(ViewModifiers.defaultButtonHeight)
                 }
                 .buttonStyle(ButtonStyles.defaultNormal)
-                .disabled(viewModel.isAnalysed)
+                .disabled(viewModel.isAnalysing || viewModel.numberOfChars == 0)
             }
         }
         .frame(maxWidth: 540)
     }
     
     @ViewBuilder var ButtonContent: some View {
-        if viewModel.isAnalysed {
+        if viewModel.isAnalysing {
             ProgressView()
                 .colorInvert()
                 .brightness(1)

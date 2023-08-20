@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class SimpleAnalyseViewModel: ObservableObject {
-    @Published var isAnalysed: Bool = false
+    @Published var isAnalysing: Bool = false
     @Published var numberOfChars: Int = .zero
     @Published var analyseResults: [String: Double] = [:]
     
@@ -20,14 +20,14 @@ final class SimpleAnalyseViewModel: ObservableObject {
     }
     
     func analyse(for text: String) {
-        isAnalysed = true
+        isAnalysing = true
         
         Task {
             let results = await predictionManager.getPrediction(for: text)
             
             await MainActor.run {
                 self.analyseResults = results
-                self.isAnalysed = false
+                self.isAnalysing = false
             }
         }
     }
