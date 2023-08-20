@@ -42,7 +42,7 @@ struct SimpleAnalyseView: View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Analyse simple text")
                 .bold24TextBlack
-            Text("Here you can quickly analyse small text to try out our product or if you doesn’t want to waste time on file creation")
+            Text("Here, you can quickly analyze a small text to try out our product. If you don't want to waste time on file creation, this is the perfect option.")
                 .regular14DarkGreyMultiline
                 .lineSpacing(6)
         }
