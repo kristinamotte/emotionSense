@@ -69,6 +69,12 @@ extension Text {
             .foregroundColor(Color(Colors.textBlack))
     }
     
+    var regular24DarkBlack: Text {
+        self
+            .font(.custom(Fonts.Raleway.regular.rawValue, size: 24))
+            .foregroundColor(Color(Colors.textBlack))
+    }
+    
     var regular14DarkGreyMultiline: some View {
         self
             .regular14DarkGrey

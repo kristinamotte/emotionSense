@@ -103,6 +103,7 @@ struct SimpleAnalyseView: View {
     // MARK: - Private
     private func editingChanged(_ value: String) {
         inputBindingManager.input = String(value.prefix(inputBindingManager.characterLimit))
+        viewModel.analyseResults = [:]
     }
 }
 

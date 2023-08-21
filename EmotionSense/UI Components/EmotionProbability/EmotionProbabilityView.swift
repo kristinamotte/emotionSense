@@ -14,6 +14,7 @@ struct EmotionProbabilityView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 8.0) {
             Text(emotionType.emoji)
+                .regular24DarkBlack
             Text(emotionText)
                 .regular14DarkBlack
             Spacer()
