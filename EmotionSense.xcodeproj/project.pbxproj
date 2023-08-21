@@ -16,6 +16,8 @@
 		7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D02A92870E005847AA /* ButtonStyles.swift */; };
 		7554E9D32A92880D005847AA /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D22A92880D005847AA /* ViewModifiers.swift */; };
 		7554E9D52A928DCA005847AA /* InputBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D42A928DCA005847AA /* InputBindingManager.swift */; };
+		7554E9E12A93BCD4005847AA /* EmotionsResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9E02A93BCD4005847AA /* EmotionsResultView.swift */; };
+		7554E9E42A93BD4B005847AA /* EmotionProbabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9E32A93BD4B005847AA /* EmotionProbabilityView.swift */; };
 		755B6F942A8039C40079CB4F /* EmotionModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */; };
 		755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F952A8039E50079CB4F /* EmotionType.swift */; };
 		755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B6F972A803D4C0079CB4F /* PredictionManager.swift */; };
@@ -73,6 +75,8 @@
 		7554E9D02A92870E005847AA /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		7554E9D22A92880D005847AA /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		7554E9D42A928DCA005847AA /* InputBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBindingManager.swift; sourceTree = "<group>"; };
+		7554E9E02A93BCD4005847AA /* EmotionsResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsResultView.swift; sourceTree = "<group>"; };
+		7554E9E32A93BD4B005847AA /* EmotionProbabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionProbabilityView.swift; sourceTree = "<group>"; };
 		755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionModelBuilder.swift; sourceTree = "<group>"; };
 		755B6F952A8039E50079CB4F /* EmotionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionType.swift; sourceTree = "<group>"; };
 		755B6F972A803D4C0079CB4F /* PredictionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
@@ -168,6 +172,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7554E9DF2A93BCAF005847AA /* EmotionsResult */ = {
+			isa = PBXGroup;
+			children = (
+				7554E9E02A93BCD4005847AA /* EmotionsResultView.swift */,
+			);
+			path = EmotionsResult;
+			sourceTree = "<group>";
+		};
+		7554E9E22A93BD34005847AA /* EmotionProbability */ = {
+			isa = PBXGroup;
+			children = (
+				7554E9E32A93BD4B005847AA /* EmotionProbabilityView.swift */,
+			);
+			path = EmotionProbability;
+			sourceTree = "<group>";
+		};
 		755B6F922A8038E30079CB4F /* System */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +270,8 @@
 		75A5C3582A90DA5E008AE449 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7554E9E22A93BD34005847AA /* EmotionProbability */,
+				7554E9DF2A93BCAF005847AA /* EmotionsResult */,
 				75A5C3592A90DA6E008AE449 /* Modifiers */,
 			);
 			path = "UI Components";
@@ -396,12 +418,14 @@
 				75ACF8112A682CF100ACE102 /* love.mlmodel in Sources */,
 				75ACF80E2A682CF100ACE102 /* remorse.mlmodel in Sources */,
 				75ACF81C2A682CF100ACE102 /* embarrassment.mlmodel in Sources */,
+				7554E9E42A93BD4B005847AA /* EmotionProbabilityView.swift in Sources */,
 				75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */,
 				75ACF8172A682CF100ACE102 /* anger.mlmodel in Sources */,
 				75ACF81F2A682CF100ACE102 /* amusement.mlmodel in Sources */,
 				75ACF81D2A682CF100ACE102 /* disapproval.mlmodel in Sources */,
 				75ACF80B2A682CF100ACE102 /* caring.mlmodel in Sources */,
 				75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */,
+				7554E9E12A93BCD4005847AA /* EmotionsResultView.swift in Sources */,
 				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
 				75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */,
 				75A5C35B2A90DA7B008AE449 /* Shake.swift in Sources */,

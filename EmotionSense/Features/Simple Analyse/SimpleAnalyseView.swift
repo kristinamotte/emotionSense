@@ -11,18 +11,14 @@ struct SimpleAnalyseView: View {
     @ObservedObject var viewModel: SimpleAnalyseViewModel
     
     // MARK: - Private
-    @StateObject private var inputBindingManager = InputBindingManager(limit: 50)
+    @StateObject private var inputBindingManager = InputBindingManager(limit: 300)
     
     var body: some View {
         HStack(spacing: .zero) {
             VStack(alignment: .leading, spacing: 24.0) {
                 Description
                 InputField
-                HStack {
-                    ForEach(viewModel.analyseResults.sorted { $0.1 > $1.1 }, id: \.key) { key, value in
-                        Text("\(key): \(value)")
-                    }
-                }
+                Results
                 Spacer()
             }
             Spacer()
@@ -92,8 +88,15 @@ struct SimpleAnalyseView: View {
         HStack(alignment: .center, spacing: .zero) {
             Group {
                 Text("\(viewModel.numberOfChars)")
-                Text("/50 chars")
+                Text("/300 chars")
             }
+        }
+    }
+    
+    @ViewBuilder var Results: some View {
+        if !viewModel.analyseResults.isEmpty {
+            EmotionsResultView(results: viewModel.analyseResults, overalReview: viewModel.overallSummary)
+                .frame(maxWidth: 540)
         }
     }
     

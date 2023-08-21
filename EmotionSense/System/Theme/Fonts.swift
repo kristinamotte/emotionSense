@@ -47,6 +47,12 @@ extension Text {
             .font(.custom(Fonts.Raleway.bold.rawValue, size: 24))
             .foregroundColor(Color(Colors.textBlack))
     }
+    
+    var bold14TextBlack: Text {
+        self
+            .font(.custom(Fonts.Raleway.bold.rawValue, size: 14))
+            .foregroundColor(Color(Colors.textBlack))
+    }
 }
 
 // MARK: - Regular
@@ -57,6 +63,12 @@ extension Text {
             .foregroundColor(Color(Colors.darkGrey))
     }
     
+    var regular14DarkBlack: Text {
+        self
+            .font(.custom(Fonts.Raleway.regular.rawValue, size: 14))
+            .foregroundColor(Color(Colors.textBlack))
+    }
+    
     var regular14DarkGreyMultiline: some View {
         self
             .regular14DarkGrey
@@ -64,3 +76,11 @@ extension Text {
     }
 }
 
+// MARK: - Light
+extension Text {
+    var light14Black: Text {
+        self
+            .font(.custom(Fonts.Raleway.light.rawValue, size: 14))
+            .foregroundColor(Color(Colors.textBlack))
+    }
+}
