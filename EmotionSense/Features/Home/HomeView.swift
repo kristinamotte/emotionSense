@@ -47,7 +47,7 @@ struct HomeView: View {
         case .simple:
             SimpleAnalyseView(viewModel: SimpleAnalyseViewModel())
         case .file:
-            Text(selectedMenuItem.name)
+            FileAnalysesView()
         case .drafts:
             Text(selectedMenuItem.name)
         }

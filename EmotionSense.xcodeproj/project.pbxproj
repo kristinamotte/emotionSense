@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		751FBFF52A977B440042CBFD /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FBFF42A977B440042CBFD /* Dimensions.swift */; };
+		751FBFF92A97838C0042CBFD /* EmotionSense.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 751FBFF72A97838C0042CBFD /* EmotionSense.xcdatamodeld */; };
+		751FBFFC2A9783E10042CBFD /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FBFFB2A9783E10042CBFD /* Persistance.swift */; };
+		751FC00F2A9798190042CBFD /* FileAnalysesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC00E2A9798190042CBFD /* FileAnalysesView.swift */; };
+		751FC0162A97A57E0042CBFD /* TextAnalyse+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC0142A97A57E0042CBFD /* TextAnalyse+CoreDataClass.swift */; };
+		751FC0172A97A57E0042CBFD /* TextAnalyse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FC0152A97A57E0042CBFD /* TextAnalyse+CoreDataProperties.swift */; };
 		75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */; };
 		75277D912A5858A1002B3BEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D902A5858A1002B3BEB /* HomeView.swift */; };
 		75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D922A5858A4002B3BEB /* Assets.xcassets */; };
@@ -66,6 +71,11 @@
 
 /* Begin PBXFileReference section */
 		751FBFF42A977B440042CBFD /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		751FBFF82A97838C0042CBFD /* EmotionSense.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmotionSense.xcdatamodel; sourceTree = "<group>"; };
+		751FBFFB2A9783E10042CBFD /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		751FC00E2A9798190042CBFD /* FileAnalysesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAnalysesView.swift; sourceTree = "<group>"; };
+		751FC0142A97A57E0042CBFD /* TextAnalyse+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextAnalyse+CoreDataClass.swift"; sourceTree = "<group>"; };
+		751FC0152A97A57E0042CBFD /* TextAnalyse+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextAnalyse+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		75277D8B2A5858A0002B3BEB /* EmotionSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSenseApp.swift; sourceTree = "<group>"; };
 		75277D902A5858A1002B3BEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -136,6 +146,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		751FBFF62A97835F0042CBFD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				751FBFF72A97838C0042CBFD /* EmotionSense.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		751FBFFA2A9783D10042CBFD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				751FC0142A97A57E0042CBFD /* TextAnalyse+CoreDataClass.swift */,
+				751FC0152A97A57E0042CBFD /* TextAnalyse+CoreDataProperties.swift */,
+				751FBFFB2A9783E10042CBFD /* Persistance.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		751FC00D2A97980B0042CBFD /* FileAnalyses */ = {
+			isa = PBXGroup;
+			children = (
+				751FC00E2A9798190042CBFD /* FileAnalysesView.swift */,
+			);
+			path = FileAnalyses;
+			sourceTree = "<group>";
+		};
 		75277D822A5858A0002B3BEB = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +230,8 @@
 		755B6F922A8038E30079CB4F /* System */ = {
 			isa = PBXGroup;
 			children = (
+				751FBFFA2A9783D10042CBFD /* Models */,
+				751FBFF62A97835F0042CBFD /* Core Data */,
 				75A5C3502A90D3A2008AE449 /* Extensions */,
 				75A5C3432A90CEAD008AE449 /* Theme */,
 				755B6F932A8039C40079CB4F /* EmotionModelBuilder.swift */,
@@ -206,6 +244,7 @@
 		755B6F992A8042810079CB4F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				751FC00D2A97980B0042CBFD /* FileAnalyses */,
 				75BCD6F92A9755D60016EBDD /* Description */,
 				75A5C3532A90D4F9008AE449 /* Simple Analyse */,
 				755B6F9A2A80428C0079CB4F /* Home */,
@@ -424,11 +463,14 @@
 				75A5C3452A90CEBC008AE449 /* Colors.swift in Sources */,
 				7554E9D52A928DCA005847AA /* InputBindingManager.swift in Sources */,
 				75A5C3572A90D51B008AE449 /* SimpleAnalyseViewModel.swift in Sources */,
+				751FC0162A97A57E0042CBFD /* TextAnalyse+CoreDataClass.swift in Sources */,
 				75ACF8152A682CF100ACE102 /* fear.mlmodel in Sources */,
 				7554E9D32A92880D005847AA /* ViewModifiers.swift in Sources */,
 				75ACF8142A682CF100ACE102 /* excitement.mlmodel in Sources */,
+				751FC00F2A9798190042CBFD /* FileAnalysesView.swift in Sources */,
 				75ACF8092A682CF100ACE102 /* sadness.mlmodel in Sources */,
 				75A5C3552A90D50C008AE449 /* SimpleAnalyseView.swift in Sources */,
+				751FBFFC2A9783E10042CBFD /* Persistance.swift in Sources */,
 				75ACF81A2A682CF100ACE102 /* surprise.mlmodel in Sources */,
 				75ACF81B2A682CF100ACE102 /* gratitude.mlmodel in Sources */,
 				755B6F982A803D4C0079CB4F /* PredictionManager.swift in Sources */,
@@ -440,6 +482,7 @@
 				75ACF81C2A682CF100ACE102 /* embarrassment.mlmodel in Sources */,
 				7554E9E42A93BD4B005847AA /* EmotionProbabilityView.swift in Sources */,
 				75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */,
+				751FC0172A97A57E0042CBFD /* TextAnalyse+CoreDataProperties.swift in Sources */,
 				75ACF8172A682CF100ACE102 /* anger.mlmodel in Sources */,
 				75ACF81F2A682CF100ACE102 /* amusement.mlmodel in Sources */,
 				75ACF81D2A682CF100ACE102 /* disapproval.mlmodel in Sources */,
@@ -460,6 +503,7 @@
 				75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */,
 				75BCD6FB2A9755E50016EBDD /* DescriptionView.swift in Sources */,
 				75A5C3522A90D3B0008AE449 /* View+Extensions.swift in Sources */,
+				751FBFF92A97838C0042CBFD /* EmotionSense.xcdatamodeld in Sources */,
 				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
 				75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */,
 				75BCD6FE2A9756F50016EBDD /* AnalyseTypeView.swift in Sources */,
@@ -663,6 +707,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		751FBFF72A97838C0042CBFD /* EmotionSense.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				751FBFF82A97838C0042CBFD /* EmotionSense.xcdatamodel */,
+			);
+			currentVersion = 751FBFF82A97838C0042CBFD /* EmotionSense.xcdatamodel */;
+			path = EmotionSense.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 75277D832A5858A0002B3BEB /* Project object */;
 }
