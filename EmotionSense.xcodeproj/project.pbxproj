@@ -59,6 +59,8 @@
 		75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8052A682CF100ACE102 /* disappointment.mlmodel */; };
 		75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8062A682CF100ACE102 /* desire.mlmodel */; };
 		75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8072A682CF100ACE102 /* admiration.mlmodel */; };
+		75BCD6FB2A9755E50016EBDD /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCD6FA2A9755E50016EBDD /* DescriptionView.swift */; };
+		75BCD6FE2A9756F50016EBDD /* AnalyseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCD6FD2A9756F50016EBDD /* AnalyseTypeView.swift */; };
 		75E395592A90DFCA007770AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34D2A90D07B008AE449 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +121,8 @@
 		75ACF8052A682CF100ACE102 /* disappointment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = disappointment.mlmodel; sourceTree = "<group>"; };
 		75ACF8062A682CF100ACE102 /* desire.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = desire.mlmodel; sourceTree = "<group>"; };
 		75ACF8072A682CF100ACE102 /* admiration.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = admiration.mlmodel; sourceTree = "<group>"; };
+		75BCD6FA2A9755E50016EBDD /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		75BCD6FD2A9756F50016EBDD /* AnalyseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseTypeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		755B6F992A8042810079CB4F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75BCD6F92A9755D60016EBDD /* Description */,
 				75A5C3532A90D4F9008AE449 /* Simple Analyse */,
 				755B6F9A2A80428C0079CB4F /* Home */,
 			);
@@ -269,6 +274,7 @@
 		75A5C3582A90DA5E008AE449 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				75BCD6FC2A9756E60016EBDD /* AnalyseTypeView */,
 				7554E9E22A93BD34005847AA /* EmotionProbability */,
 				7554E9DF2A93BCAF005847AA /* EmotionsResult */,
 				75A5C3592A90DA6E008AE449 /* Modifiers */,
@@ -322,6 +328,22 @@
 			name = models;
 			path = EmotionSense/Resources/models;
 			sourceTree = SOURCE_ROOT;
+		};
+		75BCD6F92A9755D60016EBDD /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				75BCD6FA2A9755E50016EBDD /* DescriptionView.swift */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		75BCD6FC2A9756E60016EBDD /* AnalyseTypeView */ = {
+			isa = PBXGroup;
+			children = (
+				75BCD6FD2A9756F50016EBDD /* AnalyseTypeView.swift */,
+			);
+			path = AnalyseTypeView;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -436,9 +458,11 @@
 				75277D912A5858A1002B3BEB /* HomeView.swift in Sources */,
 				75ACF80A2A682CF100ACE102 /* relief.mlmodel in Sources */,
 				75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */,
+				75BCD6FB2A9755E50016EBDD /* DescriptionView.swift in Sources */,
 				75A5C3522A90D3B0008AE449 /* View+Extensions.swift in Sources */,
 				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
 				75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */,
+				75BCD6FE2A9756F50016EBDD /* AnalyseTypeView.swift in Sources */,
 				75ACF8192A682CF100ACE102 /* pride.mlmodel in Sources */,
 				753317162A882A1C00291F13 /* MenuItem.swift in Sources */,
 				75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */,

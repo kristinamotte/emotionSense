@@ -39,7 +39,11 @@ struct HomeView: View {
     var detailContent: some View {
         switch selectedMenuItem {
         case .home:
-            Text(selectedMenuItem.name)
+            DescriptionView {
+                selectedMenuItem = .simple
+            } onFileAnalyze: {
+                selectedMenuItem = .file
+            }
         case .simple:
             SimpleAnalyseView(viewModel: SimpleAnalyseViewModel())
         case .file:

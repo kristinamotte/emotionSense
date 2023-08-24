@@ -48,9 +48,21 @@ extension Text {
             .foregroundColor(Color(Colors.textBlack))
     }
     
+    var bold24Blue: Text {
+        self
+            .font(.custom(Fonts.Raleway.bold.rawValue, size: 24))
+            .foregroundColor(Color(Colors.blue))
+    }
+    
     var bold14TextBlack: Text {
         self
             .font(.custom(Fonts.Raleway.bold.rawValue, size: 14))
+            .foregroundColor(Color(Colors.textBlack))
+    }
+    
+    var bold16TextBlack: Text {
+        self
+            .font(.custom(Fonts.Raleway.bold.rawValue, size: 16))
             .foregroundColor(Color(Colors.textBlack))
     }
 }
@@ -78,6 +90,12 @@ extension Text {
     var regular14DarkGreyMultiline: some View {
         self
             .regular14DarkGrey
+            .multilineTextAlignment(.leading)
+    }
+    
+    var regular14BlackMultiline: some View {
+        self
+            .regular14DarkBlack
             .multilineTextAlignment(.leading)
     }
 }
