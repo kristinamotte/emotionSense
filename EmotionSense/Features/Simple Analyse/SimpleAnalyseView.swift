@@ -15,7 +15,7 @@ struct SimpleAnalyseView: View {
     
     var body: some View {
         HStack(spacing: .zero) {
-            VStack(alignment: .leading, spacing: 24.0) {
+            VStack(alignment: .leading, spacing: Dimensions.padding24) {
                 Description
                 InputField
                 Results
@@ -23,37 +23,37 @@ struct SimpleAnalyseView: View {
             }
             Spacer()
         }
-        .padding(.leading, 40)
-        .padding(.top, 56)
+        .padding(.leading, Dimensions.padding40)
+        .padding(.top, Dimensions.padding56)
         .onChange(of: inputBindingManager.input) { text in
             viewModel.numberOfChars = text.count
             
-            if text.count == 0 {
+            if text.count == .zero {
                 viewModel.analyseResults = [:]
             }
         }
     }
     
     var Description: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: Dimensions.padding16) {
             Text("Analyse simple text")
                 .bold24TextBlack
             Text("Here, you can quickly analyze a small text to try out our product. If you don't want to waste time on file creation, this is the perfect option.")
                 .regular14DarkGreyMultiline
-                .lineSpacing(6)
+                .lineSpacing(Dimensions.defaultLineSpacing)
         }
-        .frame(maxWidth: 540)
+        .frame(maxWidth: Dimensions.maxContentSize)
     }
     
     var InputField: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: Dimensions.padding12) {
             TextEditor(text: $inputBindingManager.input)
                 .font(.custom(Fonts.Raleway.semiBold.rawValue, size: 14))
                 .foregroundColor(Color(Colors.textBlack))
-                .padding(.all, 16)
+                .padding(.all, Dimensions.padding16)
                 .border(Color(Colors.borderGrey), width: 2.0)
-                .cornerRadius(5.0)
-                .frame(minWidth: 540, maxWidth: 540, maxHeight: 165)
+                .cornerRadius(Dimensions.cornerRadius / 2)
+                .frame(minWidth: Dimensions.maxContentSize, maxWidth: Dimensions.maxContentSize, maxHeight: 165)
                 .disabled(viewModel.isAnalysing)
                 .onChange(of: inputBindingManager.input, perform: editingChanged)
             HStack(alignment: .center, spacing: .zero) {
@@ -67,10 +67,10 @@ struct SimpleAnalyseView: View {
                         .modifier(ViewModifiers.defaultButtonHeight)
                 }
                 .buttonStyle(ButtonStyles.defaultNormal)
-                .disabled(viewModel.isAnalysing || viewModel.numberOfChars == 0)
+                .disabled(viewModel.isAnalysing || viewModel.numberOfChars == .zero)
             }
         }
-        .frame(maxWidth: 540)
+        .frame(maxWidth: Dimensions.maxContentSize)
     }
     
     @ViewBuilder var ButtonContent: some View {
@@ -96,7 +96,7 @@ struct SimpleAnalyseView: View {
     @ViewBuilder var Results: some View {
         if !viewModel.analyseResults.isEmpty {
             EmotionsResultView(results: viewModel.analyseResults, overalReview: viewModel.overallSummary)
-                .frame(maxWidth: 540)
+                .frame(maxWidth: Dimensions.maxContentSize)
         }
     }
     

@@ -12,7 +12,7 @@ struct EmotionProbabilityView: View {
     let probability: Double
     
     var body: some View {
-        HStack(alignment: .center, spacing: 8.0) {
+        HStack(alignment: .center, spacing: Dimensions.padding8) {
             Text(emotionType.emoji)
                 .regular24DarkBlack
             Text(emotionText)

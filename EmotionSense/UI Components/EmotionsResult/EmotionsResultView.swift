@@ -15,7 +15,7 @@ struct EmotionsResultView: View {
     private let itemsPerRow = 3
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: Dimensions.padding16) {
             EmojiSection
             Group {
                 HStack(alignment: .center, spacing: .zero) {
@@ -24,22 +24,22 @@ struct EmotionsResultView: View {
                     Text(overalReview)
                         .regular14DarkBlack
                 }
-                .padding(.leading, 24)
+                .padding(.leading, Dimensions.padding24)
                 Spacer()
             }
         }
     }
     
     var EmojiSection: some View {
-        LazyVGrid(columns: columns, spacing: 16) {
+        LazyVGrid(columns: columns, spacing: Dimensions.padding16) {
             ForEach(results.sorted { $0.1 > $1.1 }, id: \.key) { item in
                 EmotionProbabilityView(emotionType: EmotionType(rawValue: item.key) ?? .unknown, probability: item.value)
                     .frame(maxWidth: .infinity)
-                    .padding(.bottom, 4)
+                    .padding(.bottom, Dimensions.padding4)
             }
         }
-        .padding(.all, 24)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color(Colors.yellowBg)))
+        .padding(.all, Dimensions.padding24)
+        .background(RoundedRectangle(cornerRadius: Dimensions.cornerRadius).fill(Color(Colors.yellowBg)))
     }
     
     private let columns = [

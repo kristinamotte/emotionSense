@@ -14,26 +14,26 @@ struct AnalyseTypeView: View {
     let onAction: (() -> Void)?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16.0) {
+        VStack(alignment: .leading, spacing: Dimensions.padding16) {
             Text(title)
                 .bold16TextBlack
             Text(description)
                 .regular14BlackMultiline
-                .lineSpacing(6)
+                .lineSpacing(Dimensions.defaultLineSpacing)
             Button {
                 onAction?()
             } label: {
-                HStack(alignment: .center, spacing: 16.0) {
+                HStack(alignment: .center, spacing: Dimensions.padding16) {
                     Image("ic_add")
                     Text("New analyse")
                 }
-                .padding(.horizontal, 16)
+                .padding(.horizontal, Dimensions.padding16)
                 .modifier(ViewModifiers.defaultButtonHeight)
             }
             .buttonStyle(ButtonStyles.lightNormal)
         }
-        .padding(.all, 16)
-        .background(RoundedRectangle(cornerRadius: 16).fill(backgroundColor))
+        .padding(.all, Dimensions.padding16)
+        .background(RoundedRectangle(cornerRadius: Dimensions.padding16).fill(backgroundColor))
     }
 }
 

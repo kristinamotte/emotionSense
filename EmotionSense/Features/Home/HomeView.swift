@@ -31,7 +31,7 @@ struct HomeView: View {
             .listRowBackground(Color(Colors.lightGrey))
         }
         .toolbarBackground(Color.clear, for: .windowToolbar)
-        .padding(.leading, 16)
+        .padding(.leading, Dimensions.padding16)
         .background(Color(Colors.lightGrey))
     }
     
@@ -55,7 +55,7 @@ struct HomeView: View {
     
     func link(to page: MenuItem) -> some View {
         NavigationLink(value: page) {
-            HStack(alignment: .center, spacing: 8) {
+            HStack(alignment: .center, spacing: Dimensions.padding8) {
                 Image(selectedMenuItem == page ? page.selectedImageName : page.imageName)
                 Text(page.name)
                     .semiBold14(with: selectedMenuItem == page ? Color(Colors.blue) : Color(Colors.darkGrey))

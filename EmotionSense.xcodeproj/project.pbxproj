@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751FBFF52A977B440042CBFD /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751FBFF42A977B440042CBFD /* Dimensions.swift */; };
 		75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */; };
 		75277D912A5858A1002B3BEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D902A5858A1002B3BEB /* HomeView.swift */; };
 		75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D922A5858A4002B3BEB /* Assets.xcassets */; };
@@ -25,7 +26,6 @@
 		75A5C3522A90D3B0008AE449 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3512A90D3B0008AE449 /* View+Extensions.swift */; };
 		75A5C3552A90D50C008AE449 /* SimpleAnalyseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3542A90D50C008AE449 /* SimpleAnalyseView.swift */; };
 		75A5C3572A90D51B008AE449 /* SimpleAnalyseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C3562A90D51B008AE449 /* SimpleAnalyseViewModel.swift */; };
-		75A5C35B2A90DA7B008AE449 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5C35A2A90DA7B008AE449 /* Shake.swift */; };
 		75A5C35C2A90DDBB008AE449 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34B2A90D051008AE449 /* Raleway-Bold.ttf */; };
 		75A5C35D2A90DDBE008AE449 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C3492A90D051008AE449 /* Raleway-Medium.ttf */; };
 		75A5C35E2A90DDBE008AE449 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C3482A90D051008AE449 /* Raleway-Regular.ttf */; };
@@ -65,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751FBFF42A977B440042CBFD /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		75277D8B2A5858A0002B3BEB /* EmotionSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionSenseApp.swift; sourceTree = "<group>"; };
 		75277D902A5858A1002B3BEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		75A5C3512A90D3B0008AE449 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		75A5C3542A90D50C008AE449 /* SimpleAnalyseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnalyseView.swift; sourceTree = "<group>"; };
 		75A5C3562A90D51B008AE449 /* SimpleAnalyseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnalyseViewModel.swift; sourceTree = "<group>"; };
-		75A5C35A2A90DA7B008AE449 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		75ACF7EC2A682CF100ACE102 /* disgust.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = disgust.mlmodel; sourceTree = "<group>"; };
 		75ACF7ED2A682CF100ACE102 /* sadness.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sadness.mlmodel; sourceTree = "<group>"; };
 		75ACF7EE2A682CF100ACE102 /* relief.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = relief.mlmodel; sourceTree = "<group>"; };
@@ -228,6 +228,7 @@
 			children = (
 				75A5C3442A90CEBC008AE449 /* Colors.swift */,
 				75A5C34E2A90D0E1008AE449 /* Fonts.swift */,
+				751FBFF42A977B440042CBFD /* Dimensions.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -285,7 +286,6 @@
 		75A5C3592A90DA6E008AE449 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				75A5C35A2A90DA7B008AE449 /* Shake.swift */,
 				7554E9D02A92870E005847AA /* ButtonStyles.swift */,
 				7554E9D22A92880D005847AA /* ViewModifiers.swift */,
 				7554E9D42A928DCA005847AA /* InputBindingManager.swift */,
@@ -448,9 +448,9 @@
 				7554E9E12A93BCD4005847AA /* EmotionsResultView.swift in Sources */,
 				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
 				75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */,
-				75A5C35B2A90DA7B008AE449 /* Shake.swift in Sources */,
 				7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */,
 				75ACF80C2A682CF100ACE102 /* grief.mlmodel in Sources */,
+				751FBFF52A977B440042CBFD /* Dimensions.swift in Sources */,
 				75ACF8102A682CF100ACE102 /* approval.mlmodel in Sources */,
 				75ACF8182A682CF100ACE102 /* realization.mlmodel in Sources */,
 				75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */,
