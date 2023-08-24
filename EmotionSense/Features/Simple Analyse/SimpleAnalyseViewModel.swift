@@ -43,9 +43,7 @@ final class SimpleAnalyseViewModel: ObservableObject {
             overallSummary = "Unable to determine the overview summary."
             return
         }
-        
-        let highestProbability = analyseResults[highestEmotion.rawValue, default: 0.0]
-        
+                
         if highestEmotion == .neutral {
             overallSummary = "The impression is of someone who maintains a neutral stance."
         } else if highestEmotion.isPositiveEmotion {

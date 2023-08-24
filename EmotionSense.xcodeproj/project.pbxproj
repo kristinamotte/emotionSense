@@ -10,7 +10,6 @@
 		75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D8E2A5858A0002B3BEB /* EmotionSenseApp.swift */; };
 		75277D912A5858A1002B3BEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277D902A5858A1002B3BEB /* HomeView.swift */; };
 		75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D922A5858A4002B3BEB /* Assets.xcassets */; };
-		75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D952A5858A4002B3BEB /* Preview Assets.xcassets */; };
 		75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277DA32A58591F002B3BEB /* HomeViewModel.swift */; };
 		753317162A882A1C00291F13 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753317152A882A1C00291F13 /* MenuItem.swift */; };
 		7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D02A92870E005847AA /* ButtonStyles.swift */; };
@@ -383,7 +382,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E395592A90DFCA007770AE /* Info.plist in Resources */,
-				75277D962A5858A4002B3BEB /* Preview Assets.xcassets in Resources */,
 				75A5C35E2A90DDBE008AE449 /* Raleway-Regular.ttf in Resources */,
 				75A5C35D2A90DDBE008AE449 /* Raleway-Medium.ttf in Resources */,
 				75A5C35F2A90DDBE008AE449 /* Raleway-Light.ttf in Resources */,
