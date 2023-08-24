@@ -9,15 +9,13 @@
 import Foundation
 import CoreData
 
-extension TextAnalyse {
-    @nonobjc class func fetchRequest() -> NSFetchRequest<TextAnalyse> {
-        NSFetchRequest<TextAnalyse>(entityName: "EmotionAnalyse")
-    }
 
-    @NSManaged var emotion: String?
-    @NSManaged var probability: Double
+extension TextAnalyse {
+    @NSManaged public var emotion: String
+    @NSManaged public var probability: Double
+    @NSManaged public var texts: EmotionText
 }
 
-extension TextAnalyse: Identifiable {
+extension TextAnalyse : Identifiable {
 
 }

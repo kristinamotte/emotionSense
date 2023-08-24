@@ -3,5 +3,16 @@
     <entity name="EmotionAnalyse" representedClassName="TextAnalyse" syncable="YES">
         <attribute name="emotion" attributeType="String"/>
         <attribute name="probability" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="texts" maxCount="1" deletionRule="Nullify" destinationEntity="EmotionText" inverseName="analysedResults" inverseEntity="EmotionText"/>
+    </entity>
+    <entity name="EmotionText" representedClassName="EmotionText" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="analysedResults" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EmotionAnalyse" inverseName="texts" inverseEntity="EmotionAnalyse"/>
+        <relationship name="list" maxCount="1" deletionRule="Nullify" destinationEntity="EmotionTextList" inverseName="texts" inverseEntity="EmotionTextList"/>
+    </entity>
+    <entity name="EmotionTextList" representedClassName="EmotionTextList" syncable="YES">
+        <attribute name="dateAdded" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <relationship name="texts" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="EmotionText" inverseName="list" inverseEntity="EmotionText"/>
     </entity>
 </model>
