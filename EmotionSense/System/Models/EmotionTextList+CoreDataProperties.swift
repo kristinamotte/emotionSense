@@ -35,7 +35,6 @@ extension EmotionTextList {
 extension EmotionTextList {
     var dateForDisplay: String {
         let calendar = Calendar.current
-        let today = Date.now
         
         if calendar.isDateInToday(dateAdded) {
             return "today"

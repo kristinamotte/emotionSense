@@ -15,7 +15,6 @@ enum MenuItem: CaseIterable, Identifiable {
     case home
     case simple
     case file
-    case drafts
     
     var name: String {
         switch self {
@@ -25,8 +24,6 @@ enum MenuItem: CaseIterable, Identifiable {
             return "Simple analyse"
         case .file:
             return "File analyse"
-        case .drafts:
-            return "Drafts"
         }
     }
     
@@ -38,8 +35,6 @@ enum MenuItem: CaseIterable, Identifiable {
             return "ic_simple"
         case .file:
             return "ic_file"
-        case .drafts:
-            return "ic_drafts"
         }
     }
     
@@ -51,8 +46,6 @@ enum MenuItem: CaseIterable, Identifiable {
             return "ic_simple_selected"
         case .file:
             return "ic_file_selected"
-        case .drafts:
-            return "ic_drafts_selected"
         }
     }
 }
