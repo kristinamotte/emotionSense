@@ -13,6 +13,7 @@ import CoreData
 extension EmotionTextList {
     @NSManaged public var dateAdded: Date
     @NSManaged public var id: String
+    @NSManaged public var title: String
     @NSManaged public var texts: [EmotionText]
 }
 
