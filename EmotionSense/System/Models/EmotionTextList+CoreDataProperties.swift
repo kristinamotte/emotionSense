@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-extension EmotionTextList {
+extension EmotionTextList: Identifiable {
     @NSManaged public var dateAdded: Date
     @NSManaged public var id: String
     @NSManaged public var title: String
@@ -32,6 +32,20 @@ extension EmotionTextList {
     @NSManaged public func removeFromTexts(_ values: NSSet)
 }
 
-extension EmotionTextList : Identifiable {
-
+extension EmotionTextList {
+    var dateForDisplay: String {
+        let calendar = Calendar.current
+        let today = Date.now
+        
+        if calendar.isDateInToday(dateAdded) {
+            return "today"
+        } else if calendar.isDateInYesterday(dateAdded) {
+            return "yesterday"
+        } else {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd MMM"
+            
+            return formatter.string(from: dateAdded)
+        }
+    }
 }

@@ -13,6 +13,7 @@ struct Dimensions {
     static let padding16: CGFloat = 16.0
     static let padding8: CGFloat = 8.0
     static let padding4: CGFloat = 4.0
+    static let padding20: CGFloat = 20.0
     static let padding24: CGFloat = 24.0
     static let padding32: CGFloat = 32.0
     static let padding40: CGFloat = 40.0

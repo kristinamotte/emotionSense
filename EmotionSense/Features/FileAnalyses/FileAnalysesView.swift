@@ -13,46 +13,68 @@ struct FileAnalysesView: View {
     @FetchRequest(entity: EmotionTextList.entity(), sortDescriptors: [NSSortDescriptor(key: "dateAdded", ascending: false)])
     var textList: FetchedResults<EmotionTextList>
     
-    @FetchRequest(entity: EmotionText.entity(), sortDescriptors: [])
-    var texts: FetchedResults<EmotionText>
-    
     var body: some View {
-        VStack {
-            ForEach(textList, id: \.self) { text in
-                HStack {
-                    Text(text.id)
-                    ForEach(text.texts, id: \.self) { item in
-                        Text(item.text)
-                        ForEach(item.analysedResults, id: \.self) { result in
-                            Text(result.emotion)
-                            Text("\(result.probability)")
+        HStack(spacing: .zero) {
+            VStack(spacing: .zero) {
+                if textList.isEmpty {
+                    FileAnalyseEmptyView {
+                        // Add new analyse
+                    }
+                } else {
+                    VStack(alignment: .leading, spacing: Dimensions.padding20) {
+                        Header
+                            .frame(maxWidth: 578)
+                        GridView
+                    }
+                }
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding(.leading, Dimensions.padding40)
+        .padding(.top, Dimensions.padding56)
+    }
+    
+    var Header: some View {
+        HStack(alignment: .center, spacing: .zero) {
+            Text("File analyse")
+                .bold24TextBlack
+            Spacer()
+            Button {
+                // Add new
+            } label: {
+                HStack(alignment: .center, spacing: Dimensions.padding16) {
+                    Image("ic_add")
+                    Text("New analyse")
+                }
+                .padding(.horizontal, Dimensions.padding16)
+                .modifier(ViewModifiers.defaultButtonHeight)
+            }
+            .buttonStyle(ButtonStyles.lightNormal)
+        }
+    }
+    
+    var GridView: some View {
+        ScrollView {
+            VStack(spacing: Dimensions.padding16) {
+                ForEach(0..<(textList.count + 1) / 2, id: \.self) { rowIndex in
+                    HStack(spacing: Dimensions.padding24) {
+                        GridItemView(item: textList[rowIndex * 2])
+                        if rowIndex * 2 + 1 < textList.count {
+                            GridItemView(item: textList[rowIndex * 2 + 1])
+                        } else {
+                            Spacer()
                         }
+                        Spacer()
                     }
                 }
             }
-            Button {
-                let analyse = TextAnalyse(context: viewContext)
-                analyse.emotion = EmotionType.anger.rawValue
-                analyse.probability = 0.9
-                
-                let text = EmotionText(context: viewContext)
-                text.text = "Test text"
-                text.addToAnalysedResults(analyse)
-                
-                let list = EmotionTextList(context: viewContext)
-                list.id = UUID().uuidString
-                list.dateAdded = Date.now
-                list.addToTexts(text)
-                
-                do {
-                    try viewContext.save()
-                } catch {
-                    let error = error as NSError
-                    print(error)
-                }
-            } label: {
-                Text("Try")
-            }
+        }
+    }
+    
+    func GridItemView(item: EmotionTextList) -> some View {
+        FileListItemView(title: item.title, date: item.dateForDisplay) {
+            // On details
         }
     }
 }

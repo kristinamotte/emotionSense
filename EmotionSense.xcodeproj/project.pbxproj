@@ -22,6 +22,9 @@
 		75277D932A5858A4002B3BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75277D922A5858A4002B3BEB /* Assets.xcassets */; };
 		75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75277DA32A58591F002B3BEB /* HomeViewModel.swift */; };
 		753317162A882A1C00291F13 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753317152A882A1C00291F13 /* MenuItem.swift */; };
+		7543907B2A9E52E6003FD300 /* FileAnalysesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543907A2A9E52E6003FD300 /* FileAnalysesViewModel.swift */; };
+		7543907E2A9E5385003FD300 /* FileAnalyseEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543907D2A9E5385003FD300 /* FileAnalyseEmptyView.swift */; };
+		754390812A9E54F1003FD300 /* FileListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754390802A9E54F0003FD300 /* FileListItemView.swift */; };
 		7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D02A92870E005847AA /* ButtonStyles.swift */; };
 		7554E9D32A92880D005847AA /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D22A92880D005847AA /* ViewModifiers.swift */; };
 		7554E9D52A928DCA005847AA /* InputBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7554E9D42A928DCA005847AA /* InputBindingManager.swift */; };
@@ -92,6 +95,9 @@
 		75277D972A5858A4002B3BEB /* EmotionSense.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmotionSense.entitlements; sourceTree = "<group>"; };
 		75277DA32A58591F002B3BEB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		753317152A882A1C00291F13 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		7543907A2A9E52E6003FD300 /* FileAnalysesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAnalysesViewModel.swift; sourceTree = "<group>"; };
+		7543907D2A9E5385003FD300 /* FileAnalyseEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAnalyseEmptyView.swift; sourceTree = "<group>"; };
+		754390802A9E54F0003FD300 /* FileListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListItemView.swift; sourceTree = "<group>"; };
 		7554E9D02A92870E005847AA /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		7554E9D22A92880D005847AA /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		7554E9D42A928DCA005847AA /* InputBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBindingManager.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				751FC00E2A9798190042CBFD /* FileAnalysesView.swift */,
+				7543907A2A9E52E6003FD300 /* FileAnalysesViewModel.swift */,
 			);
 			path = FileAnalyses;
 			sourceTree = "<group>";
@@ -221,6 +228,22 @@
 				75277D952A5858A4002B3BEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7543907C2A9E5375003FD300 /* FileAnalyseEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				7543907D2A9E5385003FD300 /* FileAnalyseEmptyView.swift */,
+			);
+			path = FileAnalyseEmptyView;
+			sourceTree = "<group>";
+		};
+		7543907F2A9E54D9003FD300 /* FileListItemView */ = {
+			isa = PBXGroup;
+			children = (
+				754390802A9E54F0003FD300 /* FileListItemView.swift */,
+			);
+			path = FileListItemView;
 			sourceTree = "<group>";
 		};
 		7554E9DF2A93BCAF005847AA /* EmotionsResult */ = {
@@ -326,6 +349,8 @@
 		75A5C3582A90DA5E008AE449 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				7543907F2A9E54D9003FD300 /* FileListItemView */,
+				7543907C2A9E5375003FD300 /* FileAnalyseEmptyView */,
 				75BCD6FC2A9756E60016EBDD /* AnalyseTypeView */,
 				7554E9E22A93BD34005847AA /* EmotionProbability */,
 				7554E9DF2A93BCAF005847AA /* EmotionsResult */,
@@ -513,6 +538,7 @@
 				75277DA42A58591F002B3BEB /* HomeViewModel.swift in Sources */,
 				751FC0392A97E83A0042CBFD /* EmotionText+CoreDataProperties.swift in Sources */,
 				75ACF8202A682CF100ACE102 /* confusion.mlmodel in Sources */,
+				7543907E2A9E5385003FD300 /* FileAnalyseEmptyView.swift in Sources */,
 				75277D912A5858A1002B3BEB /* HomeView.swift in Sources */,
 				75ACF80A2A682CF100ACE102 /* relief.mlmodel in Sources */,
 				75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */,
@@ -521,12 +547,14 @@
 				751FBFF92A97838C0042CBFD /* EmotionSense.xcdatamodeld in Sources */,
 				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
 				751FC0372A97E83A0042CBFD /* EmotionTextList+CoreDataProperties.swift in Sources */,
+				754390812A9E54F1003FD300 /* FileListItemView.swift in Sources */,
 				75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */,
 				75BCD6FE2A9756F50016EBDD /* AnalyseTypeView.swift in Sources */,
 				75ACF8192A682CF100ACE102 /* pride.mlmodel in Sources */,
 				753317162A882A1C00291F13 /* MenuItem.swift in Sources */,
 				75ACF8222A682CF100ACE102 /* desire.mlmodel in Sources */,
 				75A5C34F2A90D0E1008AE449 /* Fonts.swift in Sources */,
+				7543907B2A9E52E6003FD300 /* FileAnalysesViewModel.swift in Sources */,
 				75277D8F2A5858A0002B3BEB /* EmotionSenseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

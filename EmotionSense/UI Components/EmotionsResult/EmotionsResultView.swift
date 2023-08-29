@@ -46,10 +46,6 @@ struct EmotionsResultView: View {
         GridItem(.flexible(minimum: 150, maximum: 300)), GridItem(.flexible(minimum: 150, maximum: 300)), GridItem(.flexible(minimum: 150, maximum: 300))
     ]
     
-    private var numberOfRows: Int {
-        (results.count + itemsPerRow - 1) / itemsPerRow
-    }
-    
     private var orderedResults: [(key: String, value: Double)] {
         let sortedResults = results.sorted(by: { $0.1 < $1.1 })
         
