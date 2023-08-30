@@ -10,7 +10,6 @@ import SwiftUI
 struct FileListItemView: View {
     let title: String
     let date: String
-    let onAction: (() -> Void)?
     
     var body: some View {
         HStack(alignment: .center, spacing: Dimensions.padding8) {
@@ -27,14 +26,11 @@ struct FileListItemView: View {
         .padding(.all, Dimensions.padding16)
         .background(RoundedRectangle(cornerRadius: Dimensions.cornerRadius).fill(Color(Colors.lightBg)))
         .frame(minWidth: 277, maxWidth: 277, maxHeight: 80)
-        .onTapGesture {
-            onAction?()
-        }
     }
 }
 
 struct FileListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        FileListItemView(title: "Title example", date: "today", onAction: nil)
+        FileListItemView(title: "Title example", date: "today")
     }
 }

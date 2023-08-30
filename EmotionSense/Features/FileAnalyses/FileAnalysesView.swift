@@ -73,9 +73,12 @@ struct FileAnalysesView: View {
     }
     
     func GridItemView(item: EmotionTextList) -> some View {
-        FileListItemView(title: item.title, date: item.dateForDisplay) {
-            // On details
+        NavigationLink {
+            FileAnalyseDetailsView(text: item)
+        } label: {
+            FileListItemView(title: item.title, date: item.dateForDisplay)
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
