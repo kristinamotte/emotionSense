@@ -41,7 +41,7 @@ struct FileAnalysesView: View {
                 .bold24TextBlack
             Spacer()
             Button {
-                // Add new
+                // Add new analyse
             } label: {
                 HStack(alignment: .center, spacing: Dimensions.padding16) {
                     Image("ic_add")

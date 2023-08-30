@@ -19,3 +19,15 @@ extension TextAnalyse {
 extension TextAnalyse : Identifiable {
 
 }
+
+extension Array where Iterator.Element == TextAnalyse {
+    var toDictionary: [String: Double] {
+        var result: [String: Double] = [:]
+        
+        forEach { element in
+            result[element.emotion] = element.probability
+        }
+        
+        return result
+    }
+}

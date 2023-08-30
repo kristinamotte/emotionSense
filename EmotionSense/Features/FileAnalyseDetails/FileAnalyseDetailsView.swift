@@ -12,18 +12,44 @@ struct FileAnalyseDetailsView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack(alignment: .leading, spacing: Dimensions.padding16) {
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                HStack(alignment: .center, spacing: Dimensions.padding12) {
-                    Image("ic_return_back")
-                    Text("return back")
-                        .regular14DarkGrey
+        HStack(alignment: .center, spacing: .zero) {
+            VStack(alignment: .leading, spacing: Dimensions.padding16) {
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    HStack(alignment: .center, spacing: Dimensions.padding12) {
+                        Image("ic_return_back")
+                        Text("return back")
+                            .regular14DarkGrey
+                    }
+                }
+                .buttonStyle(PlainButtonStyle())
+                VStack(alignment: .leading, spacing: Dimensions.padding24) {
+                    Text(text.title)
+                        .bold24TextBlack
+                    Comments
+                }
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding(.leading, Dimensions.padding40)
+        .padding(.top, Dimensions.padding56)
+    }
+    
+    var Comments: some View {
+        ScrollView {
+            VStack(spacing: Dimensions.padding24) {
+                ForEach(text.texts, id: \.self) { item in
+                    VStack(alignment: .leading, spacing: Dimensions.padding16) {
+                        Text(item.text)
+                            .regular14BlackMultiline
+                        EmotionsResultView(results: item.analysedResults.toDictionary, overalReview: "")
+                        Divider()
+                    }
+                    .frame(maxWidth: Dimensions.maxContentSize)
                 }
             }
-            .buttonStyle(PlainButtonStyle())
-            Text(text.title)
         }
     }
 }

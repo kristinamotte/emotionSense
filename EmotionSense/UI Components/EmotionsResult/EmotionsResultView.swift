@@ -17,14 +17,16 @@ struct EmotionsResultView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Dimensions.padding16) {
             EmojiSection
-            Group {
-                HStack(alignment: .center, spacing: .zero) {
-                    Text("Overall analysis: ")
-                        .bold14TextBlack
-                    Text(overalReview)
-                        .regular14DarkBlack
+            if !overalReview.isEmpty {
+                Group {
+                    HStack(alignment: .center, spacing: .zero) {
+                        Text("Overall analysis: ")
+                            .bold14TextBlack
+                        Text(overalReview)
+                            .regular14DarkBlack
+                    }
+                    .padding(.leading, Dimensions.padding24)
                 }
-                .padding(.leading, Dimensions.padding24)
                 Spacer()
             }
         }
