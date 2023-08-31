@@ -16,7 +16,7 @@ struct TextResultView: View {
         VStack(alignment: .leading, spacing: Dimensions.padding16) {
             Text(text)
                 .regular14BlackMultiline
-            EmotionsResultView(results: analysedResults, overalReview: "")
+            EmotionsResultView(results: analysedResults, overalReview: "", isLoading: isLoading)
             Divider()
         }
         .frame(maxWidth: Dimensions.maxContentSize)

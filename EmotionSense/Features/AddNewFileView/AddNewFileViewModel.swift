@@ -22,7 +22,8 @@ final class AddNewFileViewModel: ObservableObject {
         if let fileUrl = fileUrl {
             paragraphs(from: fileUrl) { parsedData in
                 if let parsedData = parsedData {
-                    self.texts = parsedData
+                    let uniqueParsedData = Set(parsedData)
+                    self.texts = Array(uniqueParsedData)
                     self.isFileParsingInProgress = false
                     self.shouldNavigateToDetails = true
                 } else {

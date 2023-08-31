@@ -10,24 +10,32 @@ import SwiftUI
 struct EmotionsResultView: View {
     let results: [String: Double]
     let overalReview: String
+    let isLoading: Bool
     
     // MARK: - Helpers
     private let itemsPerRow = 3
     
     var body: some View {
         VStack(alignment: .leading, spacing: Dimensions.padding16) {
-            EmojiSection
-            if !overalReview.isEmpty {
-                Group {
-                    HStack(alignment: .center, spacing: .zero) {
-                        Text("Overall analysis: ")
-                            .bold14TextBlack
-                        Text(overalReview)
-                            .regular14DarkBlack
+            if isLoading {
+                ProgressView()
+                    .scaleEffect(x: 0.5, y: 0.5, anchor: .center)
+                    .frame(maxWidth: .infinity, maxHeight: 58)
+                    .background(RoundedRectangle(cornerRadius: Dimensions.cornerRadius).fill(Color(Colors.lightBlueBg)))
+            } else {
+                EmojiSection
+                if !overalReview.isEmpty {
+                    Group {
+                        HStack(alignment: .center, spacing: .zero) {
+                            Text("Overall analysis: ")
+                                .bold14TextBlack
+                            Text(overalReview)
+                                .regular14DarkBlack
+                        }
+                        .padding(.leading, Dimensions.padding24)
                     }
-                    .padding(.leading, Dimensions.padding24)
+                    Spacer()
                 }
-                Spacer()
             }
         }
     }
@@ -63,6 +71,6 @@ struct EmotionsResultView_Previews: PreviewProvider {
             EmotionType.love.rawValue: 0.9,
             EmotionType.sadness.rawValue: 0.4,
             EmotionType.joy.rawValue: 0.4
-        ], overalReview: "")
+        ], overalReview: "", isLoading: false)
     }
 }

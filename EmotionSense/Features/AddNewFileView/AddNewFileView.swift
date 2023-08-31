@@ -32,7 +32,7 @@ struct AddNewFileView: View {
             viewModel.cleanUpAll()
         }
         .navigationDestination(isPresented: $viewModel.shouldNavigateToDetails) {
-            Text("Details")
+            AnalyseFileDetailsView(viewModel: AnalyseFileDetailsViewModel(title: viewModel.analyseName, texts: viewModel.texts))
         }
         .navigationBarBackButtonHidden(true)
     }

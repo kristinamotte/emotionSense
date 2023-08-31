@@ -95,7 +95,7 @@ struct SimpleAnalyseView: View {
     
     @ViewBuilder var Results: some View {
         if !viewModel.analyseResults.isEmpty {
-            EmotionsResultView(results: viewModel.analyseResults, overalReview: viewModel.overallSummary)
+            EmotionsResultView(results: viewModel.analyseResults, overalReview: viewModel.overallSummary, isLoading: false)
                 .frame(maxWidth: Dimensions.maxContentSize)
         }
     }
