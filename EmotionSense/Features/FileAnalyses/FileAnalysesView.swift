@@ -13,6 +13,9 @@ struct FileAnalysesView: View {
     @FetchRequest(entity: EmotionTextList.entity(), sortDescriptors: [NSSortDescriptor(key: "dateAdded", ascending: false)])
     var textList: FetchedResults<EmotionTextList>
     
+    // MARK: - State
+    @State private var path: [EmotionTextList] = []
+    
     var body: some View {
         HStack(spacing: .zero) {
             VStack(spacing: .zero) {
@@ -38,42 +41,34 @@ struct FileAnalysesView: View {
             Text("File analyse")
                 .bold24TextBlack
             Spacer()
-            NavigationLink {
-                AddNewFileView(viewModel: AddNewFileViewModel())
-            } label: {
-                HStack(alignment: .center, spacing: Dimensions.padding16) {
-                    Image("ic_add")
-                    Text("New analyse")
-                }
-                .padding(.horizontal, Dimensions.padding16)
-                .modifier(ViewModifiers.defaultButtonHeight)
-            }
-            .buttonStyle(ButtonStyles.lightNormal)
         }
     }
     
     var GridView: some View {
         ScrollView {
-            VStack(spacing: Dimensions.padding16) {
-                ForEach(0..<(textList.count + 1) / 2, id: \.self) { rowIndex in
-                    HStack(spacing: Dimensions.padding24) {
-                        GridItemView(item: textList[rowIndex * 2])
-                        if rowIndex * 2 + 1 < textList.count {
-                            GridItemView(item: textList[rowIndex * 2 + 1])
-                        } else {
+            NavigationStack(path: $path) {
+                VStack(spacing: Dimensions.padding16) {
+                    ForEach(0..<(textList.count + 1) / 2, id: \.self) { rowIndex in
+                        HStack(spacing: Dimensions.padding24) {
+                            GridItemView(item: textList[rowIndex * 2])
+                            if rowIndex * 2 + 1 < textList.count {
+                                GridItemView(item: textList[rowIndex * 2 + 1])
+                            } else {
+                                Spacer()
+                            }
                             Spacer()
                         }
-                        Spacer()
                     }
+                }
+                .navigationDestination(for: EmotionTextList.self) { item in
+                    FileAnalyseDetailsView(text: item)
                 }
             }
         }
     }
     
     func GridItemView(item: EmotionTextList) -> some View {
-        NavigationLink {
-            FileAnalyseDetailsView(text: item)
-        } label: {
+        NavigationLink(value: item) {
             FileListItemView(title: item.title, date: item.dateForDisplay)
         }
         .buttonStyle(PlainButtonStyle())

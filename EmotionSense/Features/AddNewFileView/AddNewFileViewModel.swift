@@ -14,7 +14,7 @@ final class AddNewFileViewModel: ObservableObject {
     @Published var isFileParsingInProgress: Bool = false
     @Published var shouldNavigateToDetails: Bool = false
     @Published var failedToParseData: Bool = false
-    @Published var texts: [String] = []
+    @Published var texts: [TextAnalysis] = []
     
     func analyseAndNavigate() {
         isFileParsingInProgress = true
@@ -23,7 +23,7 @@ final class AddNewFileViewModel: ObservableObject {
             paragraphs(from: fileUrl) { parsedData in
                 if let parsedData = parsedData {
                     let uniqueParsedData = Set(parsedData)
-                    self.texts = Array(uniqueParsedData)
+                    self.texts = Array(uniqueParsedData).map { TextAnalysis(text: $0, results: [:]) }
                     self.isFileParsingInProgress = false
                     self.shouldNavigateToDetails = true
                 } else {

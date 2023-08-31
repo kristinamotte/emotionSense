@@ -50,20 +50,36 @@ struct HomeView: View {
             SimpleAnalyseView(viewModel: SimpleAnalyseViewModel())
         case .file:
             FileAnalysesView()
+        case .addNew:
+            AddNewFileView(viewModel: AddNewFileViewModel())
         }
     }
     
     func link(to page: MenuItem) -> some View {
         NavigationLink(value: page) {
+            menuItemContent(for: page)
+                .listRowSeparator(.hidden)
+        }
+        .padding(.vertical, 12)
+    }
+    
+    @ViewBuilder func menuItemContent(for page: MenuItem) -> some View {
+        if page == .addNew {
+            HStack(alignment: .center, spacing: Dimensions.padding16) {
+                Image("ic_add")
+                Text("New analyse")
+                    .semiBold14Blue
+            }
+            .padding(.horizontal, Dimensions.padding16)
+            .modifier(ViewModifiers.defaultButtonHeight)
+            .background(RoundedRectangle(cornerRadius: .infinity)).foregroundColor(Color(Colors.lightBlueBg))
+        } else {
             HStack(alignment: .center, spacing: Dimensions.padding8) {
                 Image(selectedMenuItem == page ? page.selectedImageName : page.imageName)
                 Text(page.name)
                     .semiBold14(with: selectedMenuItem == page ? Color(Colors.blue) : Color(Colors.darkGrey))
-                
             }
-            .listRowSeparator(.hidden)
         }
-        .padding(.vertical, 12)
     }
 }
 

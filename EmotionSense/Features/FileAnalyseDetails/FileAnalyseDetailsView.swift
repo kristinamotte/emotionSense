@@ -10,30 +10,23 @@ import SwiftUI
 struct FileAnalyseDetailsView: View {
     let text: EmotionTextList
     @Environment(\.managedObjectContext) var viewContext
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         HStack(alignment: .center, spacing: .zero) {
-            VStack(alignment: .leading, spacing: Dimensions.padding16) {
-                ReturnBackView {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                VStack(alignment: .leading, spacing: Dimensions.padding24) {
-                    Text(text.title)
-                        .bold24TextBlack
-                    Comments
-                }
-                Spacer()
+            VStack(alignment: .leading, spacing: Dimensions.padding24) {
+                Text(text.title)
+                    .bold24TextBlack
+                Comments
             }
             Spacer()
         }
         .padding(.leading, Dimensions.padding40)
         .padding(.top, Dimensions.padding56)
-        .navigationBarBackButtonHidden(true)
     }
     
     var Comments: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(alignment: .trailing, spacing: Dimensions.padding24) {
                 VStack(spacing: Dimensions.padding24) {
                     ForEach(text.texts, id: \.self) { item in
@@ -53,6 +46,7 @@ struct FileAnalyseDetailsView: View {
                     .modifier(ViewModifiers.defaultButtonHeight)
                 }
                 .buttonStyle(ButtonStyles.redNormal)
+                .padding(.bottom, Dimensions.padding32)
             }
         }
     }

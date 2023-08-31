@@ -3,4 +3,166 @@
    uuid = "422886B2-7A50-4FBC-8400-57A3493B1DA1"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE94E921-08C4-48C9-8FB2-429D595536A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmotionSense/Features/AnalyseFileDetailsView/AnalyseFileDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "analyse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EE94E921-08C4-48C9-8FB2-429D595536A2 - 6421c0cf374d3ce7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in closure #1 (inout Swift.TaskGroup&lt;()&gt;) async -&gt; () in closure #1 @Sendable () async -&gt; () in EmotionSense.AnalyseFileDetailsViewModel.analyse() -&gt; ()"
+                  moduleName = "EmotionSense"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/AnalyseFileDetailsView/AnalyseFileDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1607">
+               </Location>
+               <Location
+                  uuid = "EE94E921-08C4-48C9-8FB2-429D595536A2 - b258b5c9cd8c2638"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in EmotionSense.AnalyseFileDetailsViewModel.analyse() -&gt; ()"
+                  moduleName = "EmotionSense"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/AnalyseFileDetailsView/AnalyseFileDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "203">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FFF5A0B-59AA-4B98-BF21-0ACCC1E5A6CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmotionSense/Features/AnalyseFileDetailsView/AnalyseFileDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "Comments"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F86A130-110A-4BCA-AC66-0EE7DAAFBA06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmotionSense/Features/AnalyseFileDetailsView/AnalyseFileDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "Comments"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B56B0EC-4AEF-4CC7-BDFA-0FEBDECDB1BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmotionSense/Features/FileAnalyseDetails/FileAnalyseDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "Comments"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE10026D-9A4F-4827-9BE9-53D7C1CCB87C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmotionSense/Features/FileAnalyses/FileAnalysesView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BE10026D-9A4F-4827-9BE9-53D7C1CCB87C - 8a44013296117865"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;EmotionSense.FileAnalyseEmptyView&lt;EmotionSense.AddNewFileView&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of EmotionSense.FileAnalysesView.GridView : some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt; in EmotionSense.FileAnalysesView.body.getter : some"
+                  moduleName = "EmotionSense"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/FileAnalyses/FileAnalysesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "213">
+               </Location>
+               <Location
+                  uuid = "BE10026D-9A4F-4827-9BE9-53D7C1CCB87C - 5f390875bc5037a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;EmotionSense.FileAnalyseEmptyView&lt;EmotionSense.AddNewFileView&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of EmotionSense.FileAnalysesView.GridView : some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;EmotionSense.FileAnalyseEmptyView&lt;EmotionSense.AddNewFileView&gt;, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of EmotionSense.FileAnalysesView.GridView : some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt; in EmotionSense.FileAnalysesView.body.getter : some"
+                  moduleName = "EmotionSense"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/FileAnalyses/FileAnalysesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "463">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A3F7CD8-9D1F-4511-AA4B-DD3106DA9B68"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmotionSense/Features/Simple Analyse/SimpleAnalyseView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "Results"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

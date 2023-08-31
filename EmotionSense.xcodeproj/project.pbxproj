@@ -81,6 +81,7 @@
 		75CBFA032AA0D86F00DE30D4 /* AnalyseFileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBFA022AA0D86F00DE30D4 /* AnalyseFileDetailsView.swift */; };
 		75CBFA052AA0D8B300DE30D4 /* AnalyseFileDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBFA042AA0D8B300DE30D4 /* AnalyseFileDetailsViewModel.swift */; };
 		75E395592A90DFCA007770AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34D2A90D07B008AE449 /* Info.plist */; };
+		75F830982AA116E100D33509 /* TextAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F830972AA116E100D33509 /* TextAnalysis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +162,7 @@
 		75CBF9FF2AA0C96600DE30D4 /* TextResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextResultView.swift; sourceTree = "<group>"; };
 		75CBFA022AA0D86F00DE30D4 /* AnalyseFileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseFileDetailsView.swift; sourceTree = "<group>"; };
 		75CBFA042AA0D8B300DE30D4 /* AnalyseFileDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseFileDetailsViewModel.swift; sourceTree = "<group>"; };
+		75F830972AA116E100D33509 /* TextAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnalysis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				75CBFA022AA0D86F00DE30D4 /* AnalyseFileDetailsView.swift */,
+				75F830972AA116E100D33509 /* TextAnalysis.swift */,
 				75CBFA042AA0D8B300DE30D4 /* AnalyseFileDetailsViewModel.swift */,
 			);
 			path = AnalyseFileDetailsView;
@@ -595,6 +598,7 @@
 				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
 				75ACF8162A682CF100ACE102 /* joy.mlmodel in Sources */,
 				7554E9D12A92870E005847AA /* ButtonStyles.swift in Sources */,
+				75F830982AA116E100D33509 /* TextAnalysis.swift in Sources */,
 				75ACF80C2A682CF100ACE102 /* grief.mlmodel in Sources */,
 				751FBFF52A977B440042CBFD /* Dimensions.swift in Sources */,
 				75ACF8102A682CF100ACE102 /* approval.mlmodel in Sources */,

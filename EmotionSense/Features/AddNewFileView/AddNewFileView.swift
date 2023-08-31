@@ -9,32 +9,27 @@ import SwiftUI
 
 struct AddNewFileView: View {
     @ObservedObject var viewModel: AddNewFileViewModel
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        HStack(alignment: .center, spacing: .zero) {
-            VStack(alignment: .leading, spacing: Dimensions.padding16) {
-                ReturnBackView {
-                    presentationMode.wrappedValue.dismiss()
-                }
+        NavigationStack {
+            HStack(alignment: .center, spacing: .zero) {
                 VStack(alignment: .leading, spacing: Dimensions.padding24) {
                     Text("Upload file")
                         .bold24TextBlack
                     Content
+                    Spacer()
                 }
                 Spacer()
             }
-            Spacer()
+            .padding(.leading, Dimensions.padding40)
+            .padding(.top, Dimensions.padding56)
+            .onAppear {
+                viewModel.cleanUpAll()
+            }
+            .navigationDestination(isPresented: $viewModel.shouldNavigateToDetails) {
+                AnalyseFileDetailsView(viewModel: AnalyseFileDetailsViewModel(title: viewModel.analyseName, textList: viewModel.texts, shouldNavigateToDetails: $viewModel.shouldNavigateToDetails))
+            }
         }
-        .padding(.leading, Dimensions.padding40)
-        .padding(.top, Dimensions.padding56)
-        .onAppear {
-            viewModel.cleanUpAll()
-        }
-        .navigationDestination(isPresented: $viewModel.shouldNavigateToDetails) {
-            AnalyseFileDetailsView(viewModel: AnalyseFileDetailsViewModel(title: viewModel.analyseName, texts: viewModel.texts))
-        }
-        .navigationBarBackButtonHidden(true)
     }
     
     var Content: some View {

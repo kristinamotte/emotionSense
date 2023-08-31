@@ -12,12 +12,15 @@ enum MenuItem: CaseIterable, Identifiable {
         self
     }
     
+    case addNew
     case home
     case simple
     case file
     
     var name: String {
         switch self {
+        case .addNew:
+            return ""
         case .home:
             return "Home"
         case .simple:
@@ -29,6 +32,8 @@ enum MenuItem: CaseIterable, Identifiable {
     
     var imageName: String {
         switch self {
+        case .addNew:
+            return ""
         case .home:
             return "ic_home"
         case .simple:
@@ -40,6 +45,8 @@ enum MenuItem: CaseIterable, Identifiable {
     
     var selectedImageName: String {
         switch self {
+        case .addNew:
+            return ""
         case .home:
             return "ic_home_selected"
         case .simple:

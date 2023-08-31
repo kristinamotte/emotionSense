@@ -5,57 +5,72 @@
 //  Created by Kristina Motte on 31/08/2023.
 //
 
-import Foundation
+import SwiftUI
 import CoreData
 
 final class AnalyseFileDetailsViewModel: ObservableObject {
     let title: String
-    let texts: [String]
     
     // MARK: - Published
-    @Published var textList: [String: [String: Double]] = [:]
+    @Published var textList: [TextAnalysis]
     @Published var isInProgress: Bool = true
+    @Binding var shouldNavigateToDetails: Bool
     
     // MARK: - Dependencies
     private let predictionManager: PredictionManager
     
-    init(title: String, texts: [String], predictionManager: PredictionManager = .shared) {
+    init(title: String, textList: [TextAnalysis], shouldNavigateToDetails: Binding<Bool>, predictionManager: PredictionManager = .shared) {
         self.title = title
-        self.texts = texts
+        self.textList = textList
+        self._shouldNavigateToDetails = shouldNavigateToDetails
         self.predictionManager = predictionManager
     }
     
-    func setTextList() {
-        texts.forEach { text in
-            textList[text] = [:]
-        }
-    }
-    
     func analyse() {
-        texts.forEach { text in
-            Task {
-                let analyse = await self.analyse(for: text)
-
-                await MainActor.run {
-                    self.textList[text] = analyse
+        print("analyse started")
+        isInProgress = true
+        
+        Task {
+            await withTaskGroup(of: Void.self) { group in
+                for item in textList {
+                    print("\(item.text) analyse started")
+                    group.addTask {
+                        let analysis = await self.analyse(for: item.text)
+                        
+                        await MainActor.run {
+                            print("Updating textList for \(item.text)")
+                            if let index = self.textList.firstIndex(where: { $0.text == item.text }) {
+                                self.textList[index].results = analysis
+                            } else {
+                                self.textList.append(TextAnalysis(text: item.text, results: analysis))
+                            }
+                            print("Updated textList: \(self.textList)")
+                        }
+                    }
                 }
+                
+                // Wait for all tasks to complete
+                for await _ in group {}
+            }
+            
+            await MainActor.run {
+                print("inProgress updated")
+                self.isInProgress = false
             }
         }
-
-        isInProgress = false
     }
-    
+
     func save(for viewContext: NSManagedObjectContext) {
         let list = EmotionTextList(context: viewContext)
         list.id = UUID().uuidString
         list.dateAdded = Date.now
         list.title = title
         
-        textList.forEach { (key, values) in
+        textList.forEach { item in
             let text = EmotionText(context: viewContext)
-            text.text = key
+            text.text = item.text
             
-            values.forEach { (emotion, probability) in
+            item.results.forEach { (emotion, probability) in
                 let analyse = TextAnalyse(context: viewContext)
                 analyse.emotion = emotion
                 analyse.probability = probability
@@ -67,6 +82,7 @@ final class AnalyseFileDetailsViewModel: ObservableObject {
         
         do {
             try viewContext.save()
+            self.shouldNavigateToDetails = false
         } catch {
             let error = error as NSError
             print(error)
