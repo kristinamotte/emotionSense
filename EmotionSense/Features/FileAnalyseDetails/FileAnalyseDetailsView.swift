@@ -28,19 +28,14 @@ struct FileAnalyseDetailsView: View {
         }
         .padding(.leading, Dimensions.padding40)
         .padding(.top, Dimensions.padding56)
+        .navigationBarBackButtonHidden(true)
     }
     
     var Comments: some View {
         ScrollView {
             VStack(spacing: Dimensions.padding24) {
                 ForEach(text.texts, id: \.self) { item in
-                    VStack(alignment: .leading, spacing: Dimensions.padding16) {
-                        Text(item.text)
-                            .regular14BlackMultiline
-                        EmotionsResultView(results: item.analysedResults.toDictionary, overalReview: "")
-                        Divider()
-                    }
-                    .frame(maxWidth: Dimensions.maxContentSize)
+                    TextResultView(text: item.text, analysedResults: item.analysedResults.toDictionary, isLoading: false)
                 }
             }
         }

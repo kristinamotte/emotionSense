@@ -34,6 +34,7 @@ struct AddNewFileView: View {
         .navigationDestination(isPresented: $viewModel.shouldNavigateToDetails) {
             Text("Details")
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     var Content: some View {
@@ -49,15 +50,21 @@ struct AddNewFileView: View {
             VStack(alignment: .trailing, spacing: Dimensions.padding16) {
                 FileUpload
                 if viewModel.fileUrl != nil {
-                    Button {
-                        viewModel.analyseAndNavigate()
-                    } label: {
-                        ButtonContent
-                            .frame(maxWidth: 170)
-                            .modifier(ViewModifiers.defaultButtonHeight)
+                    HStack(alignment: .center, spacing: Dimensions.padding8) {
+                        if viewModel.failedToParseData {
+                            Text("Failed to parse your file data. Please review your file.")
+                                .regular14Red
+                        }
+                        Button {
+                            viewModel.analyseAndNavigate()
+                        } label: {
+                            ButtonContent
+                                .frame(maxWidth: 170)
+                                .modifier(ViewModifiers.defaultButtonHeight)
+                        }
+                        .buttonStyle(ButtonStyles.defaultNormal)
+                        .disabled(viewModel.analyseName.isEmpty || viewModel.isFileParsingInProgress)
                     }
-                    .buttonStyle(ButtonStyles.defaultNormal)
-                    .disabled(viewModel.analyseName.isEmpty || viewModel.isFileParsingInProgress)
                 }
             }
         }

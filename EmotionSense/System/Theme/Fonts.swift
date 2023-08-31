@@ -93,6 +93,12 @@ extension Text {
             .foregroundColor(Color(Colors.blue))
     }
     
+    var regular14Red: Text {
+        self
+            .font(.custom(Fonts.Raleway.regular.rawValue, size: 14))
+            .foregroundColor(Color(Colors.errorRed))
+    }
+    
     var regular24DarkBlack: Text {
         self
             .font(.custom(Fonts.Raleway.regular.rawValue, size: 24))

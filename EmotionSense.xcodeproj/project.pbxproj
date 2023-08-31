@@ -77,6 +77,7 @@
 		75CBF9F62AA0B1AE00DE30D4 /* AddNewFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9F52AA0B1AE00DE30D4 /* AddNewFileView.swift */; };
 		75CBF9F92AA0B4CC00DE30D4 /* ReturnBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9F82AA0B4CC00DE30D4 /* ReturnBackView.swift */; };
 		75CBF9FD2AA0B7D000DE30D4 /* AddNewFileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9FC2AA0B7D000DE30D4 /* AddNewFileViewModel.swift */; };
+		75CBFA002AA0C96600DE30D4 /* TextResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9FF2AA0C96600DE30D4 /* TextResultView.swift */; };
 		75E395592A90DFCA007770AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34D2A90D07B008AE449 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		75CBF9F52AA0B1AE00DE30D4 /* AddNewFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFileView.swift; sourceTree = "<group>"; };
 		75CBF9F82AA0B4CC00DE30D4 /* ReturnBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnBackView.swift; sourceTree = "<group>"; };
 		75CBF9FC2AA0B7D000DE30D4 /* AddNewFileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFileViewModel.swift; sourceTree = "<group>"; };
+		75CBF9FF2AA0C96600DE30D4 /* TextResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 		75A5C3582A90DA5E008AE449 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				75CBF9FE2AA0C95700DE30D4 /* TextResultView */,
 				75CBF9F72AA0B4B700DE30D4 /* ReturnBackView */,
 				7543907F2A9E54D9003FD300 /* FileListItemView */,
 				7543907C2A9E5375003FD300 /* FileAnalyseEmptyView */,
@@ -455,6 +458,14 @@
 				75CBF9F82AA0B4CC00DE30D4 /* ReturnBackView.swift */,
 			);
 			path = ReturnBackView;
+			sourceTree = "<group>";
+		};
+		75CBF9FE2AA0C95700DE30D4 /* TextResultView */ = {
+			isa = PBXGroup;
+			children = (
+				75CBF9FF2AA0C96600DE30D4 /* TextResultView.swift */,
+			);
+			path = TextResultView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +598,7 @@
 				751FBFF92A97838C0042CBFD /* EmotionSense.xcdatamodeld in Sources */,
 				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
 				751FC0372A97E83A0042CBFD /* EmotionTextList+CoreDataProperties.swift in Sources */,
+				75CBFA002AA0C96600DE30D4 /* TextResultView.swift in Sources */,
 				754390812A9E54F1003FD300 /* FileListItemView.swift in Sources */,
 				75ACF8082A682CF100ACE102 /* disgust.mlmodel in Sources */,
 				75BCD6FE2A9756F50016EBDD /* AnalyseTypeView.swift in Sources */,
