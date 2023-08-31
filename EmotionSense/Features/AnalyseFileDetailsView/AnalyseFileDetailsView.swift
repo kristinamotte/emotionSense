@@ -37,16 +37,17 @@ struct AnalyseFileDetailsView: View {
                         TextResultView(text: item.text, analysedResults: item.results, isLoading: item.results.isEmpty)
                     }
                 }
-                Button {
-                    viewModel.save(for: viewContext)
-                } label: {
-                    Text("Save")
-                        .frame(maxWidth: 170)
-                        .modifier(ViewModifiers.defaultButtonHeight)
+                if !viewModel.isInProgress {
+                    Button {
+                        viewModel.save(for: viewContext)
+                    } label: {
+                        Text("Save")
+                            .frame(maxWidth: 170)
+                            .modifier(ViewModifiers.defaultButtonHeight)
+                    }
+                    .buttonStyle(ButtonStyles.defaultNormal)
+                    .padding(.bottom, Dimensions.padding32)
                 }
-                .buttonStyle(ButtonStyles.defaultNormal)
-                .disabled(viewModel.isInProgress)
-                .padding(.bottom, Dimensions.padding32)
             }
         }
     }

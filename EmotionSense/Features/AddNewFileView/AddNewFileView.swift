@@ -23,11 +23,16 @@ struct AddNewFileView: View {
             }
             .padding(.leading, Dimensions.padding40)
             .padding(.top, Dimensions.padding56)
-            .onAppear {
-                viewModel.cleanUpAll()
-            }
             .navigationDestination(isPresented: $viewModel.shouldNavigateToDetails) {
                 AnalyseFileDetailsView(viewModel: AnalyseFileDetailsViewModel(title: viewModel.analyseName, textList: viewModel.texts, shouldNavigateToDetails: $viewModel.shouldNavigateToDetails))
+            }
+        }
+        .onAppear {
+            viewModel.cleanUpAll()
+        }
+        .onChange(of: viewModel.shouldNavigateToDetails) { shouldNavigateToDetails in
+            if !shouldNavigateToDetails {
+                viewModel.cleanUpAll()
             }
         }
     }
