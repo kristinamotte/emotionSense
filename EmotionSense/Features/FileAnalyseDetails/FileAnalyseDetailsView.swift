@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FileAnalyseDetailsView: View {
     let text: EmotionTextList
+    @Environment(\.managedObjectContext) var viewContext
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -36,6 +37,13 @@ struct FileAnalyseDetailsView: View {
             VStack(spacing: Dimensions.padding24) {
                 ForEach(text.texts, id: \.self) { item in
                     TextResultView(text: item.text, analysedResults: item.analysedResults.toDictionary, isLoading: false)
+                }
+                Button {
+                    text.remove(for: viewContext) { _ in
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                } label: {
+                    Text("Remove data")
                 }
             }
         }

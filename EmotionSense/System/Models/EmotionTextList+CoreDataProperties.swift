@@ -30,6 +30,26 @@ extension EmotionTextList {
 
     @objc(removeTexts:)
     @NSManaged public func removeFromTexts(_ values: NSSet)
+    
+    func remove(for viewContext: NSManagedObjectContext, completion: @escaping (NSError?) -> Void) {
+        texts.forEach { item in
+            item.analysedResults.forEach { analyse in
+                viewContext.delete(analyse)
+            }
+            
+            viewContext.delete(item)
+        }
+        
+        viewContext.delete(self)
+        
+        do {
+            try viewContext.save()
+            completion(nil)
+        } catch {
+            let error = error as NSError
+            completion(error)
+        }
+    }
 }
 
 extension EmotionTextList {

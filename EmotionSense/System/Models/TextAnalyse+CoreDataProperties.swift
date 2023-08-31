@@ -10,14 +10,10 @@ import Foundation
 import CoreData
 
 
-extension TextAnalyse {
+extension TextAnalyse: Identifiable {
     @NSManaged public var emotion: String
     @NSManaged public var probability: Double
     @NSManaged public var texts: EmotionText
-}
-
-extension TextAnalyse : Identifiable {
-
 }
 
 extension Array where Iterator.Element == TextAnalyse {
