@@ -17,7 +17,9 @@ struct HomeView: View {
         NavigationSplitView {
             SidebarContent
         } detail: {
-            detailContent
+            NavigationStack {
+                detailContent
+            }
         }
         .navigationSplitViewStyle(.balanced)
         .background(Color.white)

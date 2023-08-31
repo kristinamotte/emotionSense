@@ -14,16 +14,9 @@ struct FileAnalyseDetailsView: View {
     var body: some View {
         HStack(alignment: .center, spacing: .zero) {
             VStack(alignment: .leading, spacing: Dimensions.padding16) {
-                Button {
+                ReturnBackView {
                     presentationMode.wrappedValue.dismiss()
-                } label: {
-                    HStack(alignment: .center, spacing: Dimensions.padding12) {
-                        Image("ic_return_back")
-                        Text("return back")
-                            .regular14DarkGrey
-                    }
                 }
-                .buttonStyle(PlainButtonStyle())
                 VStack(alignment: .leading, spacing: Dimensions.padding24) {
                     Text(text.title)
                         .bold24TextBlack

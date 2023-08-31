@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FileAnalyseEmptyView: View {
-    let onAction: (() -> Void)?
+struct FileAnalyseEmptyView<TargetView: View>: View {
+    let destination: TargetView
     
     var body: some View {
         HStack(spacing: .zero) {
@@ -17,8 +17,8 @@ struct FileAnalyseEmptyView: View {
                 Image("ic_file_empty")
                 Text("Currently, you don't have any analyzed texts")
                     .regular16Black
-                Button {
-                    onAction?()
+                NavigationLink {
+                    destination
                 } label: {
                     HStack(alignment: .center, spacing: Dimensions.padding16) {
                         Image("ic_add")
@@ -36,6 +36,6 @@ struct FileAnalyseEmptyView: View {
 
 struct FileAnalyseEmptyView_Previews: PreviewProvider {
     static var previews: some View {
-        FileAnalyseEmptyView(onAction: nil)
+        FileAnalyseEmptyView(destination: Text(""))
     }
 }

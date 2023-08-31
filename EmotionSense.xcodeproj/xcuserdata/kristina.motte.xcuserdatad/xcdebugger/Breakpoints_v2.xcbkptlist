@@ -7,47 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2343CC37-6F8A-4E31-8E5E-4F6A2E53DCF7"
+            uuid = "A91759A0-F73F-464A-BB54-9B6029CF82DD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EmotionSense/Features/FileAnalyseDetails/FileAnalyseDetailsView.swift"
+            filePath = "EmotionSense/Features/AddNewFileView/AddNewFileViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "Comments"
-            landmarkType = "24">
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "analyseAndNavigate()"
+            landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "2343CC37-6F8A-4E31-8E5E-4F6A2E53DCF7 - f1e8331b366b396"
+                  uuid = "A91759A0-F73F-464A-BB54-9B6029CF82DD - 5f3b3680eabf3e71"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;EmotionSense.EmotionText&gt;, EmotionSense.EmotionText, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;EmotionSense.EmotionText&gt;, EmotionSense.EmotionText, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in EmotionSense.FileAnalyseDetailsView.Comments.getter : some"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in EmotionSense.AddNewFileViewModel.analyseAndNavigate() -&gt; ()"
                   moduleName = "EmotionSense"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/FileAnalyseDetails/FileAnalyseDetailsView.swift"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/AddNewFileView/AddNewFileViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "141">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "50">
                </Location>
                <Location
-                  uuid = "2343CC37-6F8A-4E31-8E5E-4F6A2E53DCF7 - d31fbcbfac9c7866"
+                  uuid = "A91759A0-F73F-464A-BB54-9B6029CF82DD - 47f2ac9acae464c1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EmotionSense.EmotionText) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;EmotionSense.EmotionText&gt;, EmotionSense.EmotionText, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;EmotionSense.EmotionText&gt;, EmotionSense.EmotionText, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;&gt; in EmotionSense.FileAnalyseDetailsView.Comments.getter : some"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;) -&gt; () in EmotionSense.AddNewFileViewModel.analyseAndNavigate() -&gt; ()"
                   moduleName = "EmotionSense"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/FileAnalyseDetails/FileAnalyseDetailsView.swift"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/AddNewFileView/AddNewFileViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "196">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "82">
                </Location>
             </Locations>
          </BreakpointContent>

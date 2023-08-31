@@ -17,9 +17,7 @@ struct FileAnalysesView: View {
         HStack(spacing: .zero) {
             VStack(spacing: .zero) {
                 if textList.isEmpty {
-                    FileAnalyseEmptyView {
-                        // Add new analyse
-                    }
+                    FileAnalyseEmptyView(destination: AddNewFileView(viewModel: AddNewFileViewModel()))
                 } else {
                     VStack(alignment: .leading, spacing: Dimensions.padding20) {
                         Header
@@ -40,8 +38,8 @@ struct FileAnalysesView: View {
             Text("File analyse")
                 .bold24TextBlack
             Spacer()
-            Button {
-                // Add new analyse
+            NavigationLink {
+                AddNewFileView(viewModel: AddNewFileViewModel())
             } label: {
                 HStack(alignment: .center, spacing: Dimensions.padding16) {
                     Image("ic_add")

@@ -74,6 +74,9 @@
 		75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 75ACF8072A682CF100ACE102 /* admiration.mlmodel */; };
 		75BCD6FB2A9755E50016EBDD /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCD6FA2A9755E50016EBDD /* DescriptionView.swift */; };
 		75BCD6FE2A9756F50016EBDD /* AnalyseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCD6FD2A9756F50016EBDD /* AnalyseTypeView.swift */; };
+		75CBF9F62AA0B1AE00DE30D4 /* AddNewFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9F52AA0B1AE00DE30D4 /* AddNewFileView.swift */; };
+		75CBF9F92AA0B4CC00DE30D4 /* ReturnBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9F82AA0B4CC00DE30D4 /* ReturnBackView.swift */; };
+		75CBF9FD2AA0B7D000DE30D4 /* AddNewFileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CBF9FC2AA0B7D000DE30D4 /* AddNewFileViewModel.swift */; };
 		75E395592A90DFCA007770AE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75A5C34D2A90D07B008AE449 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +152,9 @@
 		75ACF8072A682CF100ACE102 /* admiration.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = admiration.mlmodel; sourceTree = "<group>"; };
 		75BCD6FA2A9755E50016EBDD /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		75BCD6FD2A9756F50016EBDD /* AnalyseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyseTypeView.swift; sourceTree = "<group>"; };
+		75CBF9F52AA0B1AE00DE30D4 /* AddNewFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFileView.swift; sourceTree = "<group>"; };
+		75CBF9F82AA0B4CC00DE30D4 /* ReturnBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnBackView.swift; sourceTree = "<group>"; };
+		75CBF9FC2AA0B7D000DE30D4 /* AddNewFileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +295,7 @@
 		755B6F992A8042810079CB4F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75CBF9F42AA0B19700DE30D4 /* AddNewFileView */,
 				754390842A9E920E003FD300 /* FileAnalyseDetails */,
 				751FC00D2A97980B0042CBFD /* FileAnalyses */,
 				75BCD6F92A9755D60016EBDD /* Description */,
@@ -360,6 +367,7 @@
 		75A5C3582A90DA5E008AE449 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				75CBF9F72AA0B4B700DE30D4 /* ReturnBackView */,
 				7543907F2A9E54D9003FD300 /* FileListItemView */,
 				7543907C2A9E5375003FD300 /* FileAnalyseEmptyView */,
 				75BCD6FC2A9756E60016EBDD /* AnalyseTypeView */,
@@ -430,6 +438,23 @@
 				75BCD6FD2A9756F50016EBDD /* AnalyseTypeView.swift */,
 			);
 			path = AnalyseTypeView;
+			sourceTree = "<group>";
+		};
+		75CBF9F42AA0B19700DE30D4 /* AddNewFileView */ = {
+			isa = PBXGroup;
+			children = (
+				75CBF9F52AA0B1AE00DE30D4 /* AddNewFileView.swift */,
+				75CBF9FC2AA0B7D000DE30D4 /* AddNewFileViewModel.swift */,
+			);
+			path = AddNewFileView;
+			sourceTree = "<group>";
+		};
+		75CBF9F72AA0B4B700DE30D4 /* ReturnBackView */ = {
+			isa = PBXGroup;
+			children = (
+				75CBF9F82AA0B4CC00DE30D4 /* ReturnBackView.swift */,
+			);
+			path = ReturnBackView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +556,7 @@
 				75ACF80E2A682CF100ACE102 /* remorse.mlmodel in Sources */,
 				75ACF81C2A682CF100ACE102 /* embarrassment.mlmodel in Sources */,
 				751FC0382A97E83A0042CBFD /* EmotionText+CoreDataClass.swift in Sources */,
+				75CBF9F92AA0B4CC00DE30D4 /* ReturnBackView.swift in Sources */,
 				7554E9E42A93BD4B005847AA /* EmotionProbabilityView.swift in Sources */,
 				75ACF8212A682CF100ACE102 /* disappointment.mlmodel in Sources */,
 				751FC0352A97E83A0042CBFD /* TextAnalyse+CoreDataProperties.swift in Sources */,
@@ -538,6 +564,7 @@
 				75ACF81F2A682CF100ACE102 /* amusement.mlmodel in Sources */,
 				75ACF81D2A682CF100ACE102 /* disapproval.mlmodel in Sources */,
 				75ACF80B2A682CF100ACE102 /* caring.mlmodel in Sources */,
+				75CBF9F62AA0B1AE00DE30D4 /* AddNewFileView.swift in Sources */,
 				75ACF8232A682CF100ACE102 /* admiration.mlmodel in Sources */,
 				7554E9E12A93BCD4005847AA /* EmotionsResultView.swift in Sources */,
 				75ACF8132A682CF100ACE102 /* neutral.mlmodel in Sources */,
@@ -556,6 +583,7 @@
 				75ACF80F2A682CF100ACE102 /* curiosity.mlmodel in Sources */,
 				75BCD6FB2A9755E50016EBDD /* DescriptionView.swift in Sources */,
 				75A5C3522A90D3B0008AE449 /* View+Extensions.swift in Sources */,
+				75CBF9FD2AA0B7D000DE30D4 /* AddNewFileViewModel.swift in Sources */,
 				751FBFF92A97838C0042CBFD /* EmotionSense.xcdatamodeld in Sources */,
 				755B6F962A8039E50079CB4F /* EmotionType.swift in Sources */,
 				751FC0372A97E83A0042CBFD /* EmotionTextList+CoreDataProperties.swift in Sources */,
