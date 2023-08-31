@@ -9,7 +9,18 @@ import SwiftUI
 
 final class ButtonStyles {
     static let defaultNormal = DefaultNormal()
+    static let redNormal = RedNormal()
     static let lightNormal = LightNormal()
+    
+    struct RedNormal: ButtonStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            configuration.label
+                .buttonStyle(.plain)
+                .font(.custom(Fonts.Raleway.bold.rawValue, size: 14.0))
+                .foregroundColor(Color.white)
+                .background(RoundedRectangle(cornerRadius: .infinity)).foregroundColor(configuration.isPressed ? Color(Colors.errorRed) : Color(Colors.buttonRed))
+        }
+    }
     
     struct DefaultNormal: ButtonStyle {
         func makeBody(configuration: Configuration) -> some View {

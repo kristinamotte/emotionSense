@@ -34,17 +34,25 @@ struct FileAnalyseDetailsView: View {
     
     var Comments: some View {
         ScrollView {
-            VStack(spacing: Dimensions.padding24) {
-                ForEach(text.texts, id: \.self) { item in
-                    TextResultView(text: item.text, analysedResults: item.analysedResults.toDictionary, isLoading: false)
+            VStack(alignment: .trailing, spacing: Dimensions.padding24) {
+                VStack(spacing: Dimensions.padding24) {
+                    ForEach(text.texts, id: \.self) { item in
+                        TextResultView(text: item.text, analysedResults: item.analysedResults.toDictionary, isLoading: false)
+                    }
                 }
                 Button {
                     text.remove(for: viewContext) { _ in
                         presentationMode.wrappedValue.dismiss()
                     }
                 } label: {
-                    Text("Remove data")
+                    HStack(alignment: .center, spacing: Dimensions.padding16) {
+                        Image("ic_remove")
+                        Text("Remove data")
+                    }
+                    .padding(.horizontal, Dimensions.padding16)
+                    .modifier(ViewModifiers.defaultButtonHeight)
                 }
+                .buttonStyle(ButtonStyles.redNormal)
             }
         }
     }
