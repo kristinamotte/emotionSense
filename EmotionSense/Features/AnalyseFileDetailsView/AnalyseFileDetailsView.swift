@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnalyseFileDetailsView: View {
-    @ObservedObject var viewModel: AnalyseFileDetailsViewModel
+    @StateObject var viewModel: AnalyseFileDetailsViewModel
     @Environment(\.managedObjectContext) var viewContext
     
     var body: some View {
@@ -24,8 +24,11 @@ struct AnalyseFileDetailsView: View {
         }
         .padding(.leading, Dimensions.padding40)
         .padding(.top, Dimensions.padding56)
-        .onAppear {
-            viewModel.analyse()
+        .task {
+            await viewModel.analyse()
+        }
+        .onChange(of: viewModel.textList) { newValue in
+            print(newValue)
         }
     }
     

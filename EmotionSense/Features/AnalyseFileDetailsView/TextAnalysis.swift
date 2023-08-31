@@ -7,14 +7,9 @@
 
 import Foundation
 
-final class TextAnalysis: ObservableObject, Hashable, Equatable {
-    @Published var text: String
-    @Published var results: [String: Double]
-
-    init(text: String, results: [String: Double]) {
-        self.text = text
-        self.results = results
-    }
+struct TextAnalysis: Hashable, Equatable {
+    let text: String
+    let results: [String: Double]
     
     static func == (lhs: TextAnalysis, rhs: TextAnalysis) -> Bool {
         lhs.text == rhs.text

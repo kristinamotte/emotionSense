@@ -26,37 +26,33 @@ final class AnalyseFileDetailsViewModel: ObservableObject {
         self.predictionManager = predictionManager
     }
     
-    func analyse() {
-        print("analyse started")
+    @MainActor
+    func analyse() async {
         isInProgress = true
         
-        Task {
-            await withTaskGroup(of: Void.self) { group in
-                for item in textList {
-                    print("\(item.text) analyse started")
-                    group.addTask {
-                        let analysis = await self.analyse(for: item.text)
-                        
-                        await MainActor.run {
-                            print("Updating textList for \(item.text)")
-                            if let index = self.textList.firstIndex(where: { $0.text == item.text }) {
-                                self.textList[index].results = analysis
-                            } else {
-                                self.textList.append(TextAnalysis(text: item.text, results: analysis))
-                            }
-                            print("Updated textList: \(self.textList)")
+        await withTaskGroup(of: Void.self) { group in
+            for item in textList {
+                group.addTask {
+                    let analysis = await self.analyse(for: item.text)
+                    
+                    // Since the enclosing function is already running on the main actor,
+                    // there's no need to switch to it again.
+                    await MainActor.run {
+                        if let index = self.textList.firstIndex(where: { $0.text == item.text }) {
+                            self.textList[index] = TextAnalysis(text: item.text, results: analysis)
+                        } else {
+                            self.textList.append(TextAnalysis(text: item.text, results: analysis))
                         }
                     }
                 }
-                
-                // Wait for all tasks to complete
-                for await _ in group {}
             }
             
-            await MainActor.run {
-                print("inProgress updated")
-                self.isInProgress = false
-            }
+            // Wait for all tasks to complete
+            for await _ in group {}
+        }
+        
+        await MainActor.run {
+            self.isInProgress = false
         }
     }
 
