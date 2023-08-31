@@ -39,7 +39,7 @@ final class PredictionManager {
             let predictionSet = predictor.predictedLabelHypotheses(for: text, maximumCount: 1)
             let confidence = predictionSet[prediction] ?? 0.0
             
-            if prediction == "1", confidence > 0.6 {
+            if prediction == "1", confidence > 0.7 {
                 results[type.rawValue] = confidence
             }
         }

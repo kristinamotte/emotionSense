@@ -44,7 +44,7 @@ struct HomeView: View {
             DescriptionView {
                 selectedMenuItem = .simple
             } onFileAnalyze: {
-                selectedMenuItem = .file
+                selectedMenuItem = .addNew
             }
         case .simple:
             SimpleAnalyseView(viewModel: SimpleAnalyseViewModel())

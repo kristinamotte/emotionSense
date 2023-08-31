@@ -20,7 +20,7 @@ struct FileAnalysesView: View {
         HStack(spacing: .zero) {
             VStack(spacing: .zero) {
                 if textList.isEmpty {
-                    FileAnalyseEmptyView(destination: AddNewFileView(viewModel: AddNewFileViewModel()))
+                    FileAnalyseEmptyView()
                 } else {
                     VStack(alignment: .leading, spacing: Dimensions.padding20) {
                         Header
