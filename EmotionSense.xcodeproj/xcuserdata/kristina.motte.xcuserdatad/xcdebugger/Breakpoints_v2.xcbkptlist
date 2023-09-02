@@ -49,6 +49,21 @@
                   endingLineNumber = "44"
                   offsetFromSymbolStart = "196">
                </Location>
+               <Location
+                  uuid = "2343CC37-6F8A-4E31-8E5E-4F6A2E53DCF7 - d750b9cf4b58291d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Image, SwiftUI.Text)&gt; in closure #3 () -&gt; SwiftUI.ModifiedContent&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, EmotionSense.ViewModifiers.DefaultButtonHeightModifier&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;EmotionSense.EmotionText&gt;, EmotionSense.EmotionText, EmotionSense.TextResultView&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;EmotionSense.EmotionText&gt;, EmotionSense.EmotionText, EmotionSense.TextResultView&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt; in EmotionSense.FileAnalyseDetailsView.Comments.getter : some"
+                  moduleName = "EmotionSense"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristina.motte/Documents/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/App/EmotionSense/Features/FileAnalyseDetails/FileAnalyseDetailsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "165">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

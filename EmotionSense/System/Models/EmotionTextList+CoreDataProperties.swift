@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension EmotionTextList: Identifiable {
     @NSManaged public var dateAdded: Date
     @NSManaged public var id: String
